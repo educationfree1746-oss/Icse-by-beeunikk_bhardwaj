@@ -28,5 +28,73 @@
 </section>
   <h1>ICSE Study Hub</h1>
   <p>Welcome to ICSE Study Hub.</p>
+  <!-- Automatic Materials -->
+<section>
+    <h2>My Study Materials</h2>
+    <div id="materials">Loading files...</div>
+</section>
+
+<script>
+const username = "Beeunikk_Bhardwaj";
+const repository = "ICSE-by-Beeunikk_Bhardwaj";
+const folder = "materials";
+
+const container = document.getElementById("materials");
+
+fetch(`https://api.github.com/repos/${username}/${repository}/contents/${folder}`)
+    .then(response => response.json())
+    .then(files => {
+        container.innerHTML = "";
+
+        files.forEach(file => {
+            const url = file.download_url;
+            const name = file.name;
+            const extension = name.split(".").pop().toLowerCase();
+
+            if (["png", "jpg", "jpeg", "gif", "webp"].includes(extension)) {
+                const img = document.createElement("img");
+                img.src = url;
+                img.alt = name;
+                img.style.maxWidth = "100%";
+                img.style.display = "block";
+                img.style.margin = "15px auto";
+                container.appendChild(img);
+            }
+
+            else if (["mp4", "webm", "ogg"].includes(extension)) {
+                const video = document.createElement("video");
+                video.src = url;
+                video.controls = true;
+                video.style.width = "100%";
+                video.style.maxWidth = "800px";
+                container.appendChild(video);
+            }
+
+            else if (extension === "pdf") {
+                const pdf = document.createElement("a");
+                pdf.href = url;
+                pdf.target = "_blank";
+                pdf.textContent = "📄 Open " + name;
+                pdf.style.display = "block";
+                pdf.style.margin = "15px";
+                container.appendChild(pdf);
+            }
+
+            else {
+                const link = document.createElement("a");
+                link.href = url;
+                link.target = "_blank";
+                link.download = name;
+                link.textContent = "📁 Download " + name;
+                link.style.display = "block";
+                link.style.margin = "15px";
+                container.appendChild(link);
+            }
+        });
+    })
+    .catch(error => {
+        container.innerHTML = "Unable to load materials.";
+    });
+</script>
 </body>
 </html>
