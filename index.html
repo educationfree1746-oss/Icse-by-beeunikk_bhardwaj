@@ -18,146 +18,169 @@ content="KWy4Jf7SYdAFLb8-fOc6aUM2hg3fsdn1pElxtMMU7Gw">
 }
 
 body{
-    background:#f4f8ff;
-    color:#123;
+    background:#f7f7fb;
+    color:#20243a;
 }
 
 button{
+    border:0;
     cursor:pointer;
-    border:none;
 }
 
 .hidden{
     display:none!important;
 }
 
-/* LOGIN */
+/* ================= LOGIN ================= */
 
 #loginPage{
     min-height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
-    background:linear-gradient(135deg,#0066ff,#00aaff);
     padding:20px;
+    background:linear-gradient(135deg,#315bea,#7b4ce2);
 }
 
 .login-box{
     width:100%;
-    max-width:380px;
+    max-width:390px;
     background:white;
-    padding:30px 22px;
     border-radius:25px;
+    padding:30px 22px;
     text-align:center;
-    box-shadow:0 15px 40px rgba(0,0,0,.2);
+    box-shadow:0 20px 50px rgba(0,0,0,.2);
 }
 
 .logo{
     width:105px;
     height:105px;
     border-radius:50%;
-    background:#0066ff;
+    background:linear-gradient(135deg,#315bea,#7b4ce2);
     color:white;
     display:flex;
-    align-items:center;
     justify-content:center;
-    margin:0 auto 18px;
-    font-size:28px;
+    align-items:center;
+    margin:auto;
     font-weight:bold;
-    border:6px solid #e7f0ff;
+    font-size:27px;
+    border:6px solid #eeeaff;
 }
 
 .login-box h1{
-    color:#0066ff;
-    margin-bottom:8px;
+    margin-top:15px;
+    color:#315bea;
 }
 
 .login-box p{
-    color:#666;
-    margin-bottom:20px;
+    color:#777;
+    margin:8px 0 15px;
 }
 
 input,textarea{
     width:100%;
     padding:14px;
-    margin:8px 0;
-    border:1px solid #ccd8e8;
+    margin:7px 0;
+    border:1px solid #d8dbea;
     border-radius:12px;
     font-size:16px;
     outline:none;
 }
 
-input:focus,textarea:focus{
-    border-color:#0066ff;
+input:focus,
+textarea:focus{
+    border-color:#7b4ce2;
 }
 
 .primary-btn{
     width:100%;
     padding:14px;
-    border-radius:12px;
-    background:#0066ff;
+    background:#315bea;
     color:white;
+    border-radius:12px;
     font-size:16px;
     font-weight:bold;
-    margin-top:10px;
+    margin-top:8px;
 }
 
-.secondary-btn{
-    background:#eaf2ff;
-    color:#0066ff;
-    padding:10px 15px;
-    border-radius:10px;
-    margin-top:10px;
+.green-btn{
+    background:#16a673;
 }
 
-/* APP */
+.purple-btn{
+    background:#7b4ce2;
+}
+
+/* ================= APP ================= */
 
 #app{
     min-height:100vh;
-    padding-bottom:75px;
+    padding-bottom:82px;
 }
 
 .header{
-    background:#0066ff;
-    color:white;
-    padding:18px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
     position:sticky;
     top:0;
     z-index:10;
+    background:white;
+    padding:13px 15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
 .small-logo{
-    width:45px;
-    height:45px;
-    background:white;
-    color:#0066ff;
+    width:43px;
+    height:43px;
     border-radius:50%;
+    background:linear-gradient(135deg,#315bea,#7b4ce2);
+    color:white;
     display:flex;
     align-items:center;
     justify-content:center;
+    font-size:11px;
     font-weight:bold;
-    font-size:13px;
 }
 
-.header h2{
-    font-size:20px;
+.brand-name{
+    font-weight:bold;
+    font-size:18px;
 }
 
-.xp-badge{
-    background:white;
-    color:#0066ff;
-    padding:8px 12px;
-    border-radius:20px;
+.top-stats{
+    display:flex;
+    gap:7px;
+}
+
+.stat{
+    padding:8px 10px;
+    border-radius:18px;
+    font-size:12px;
     font-weight:bold;
+}
+
+.xp-stat{
+    background:#fff0d7;
+    color:#d57b00;
+}
+
+.rank-stat{
+    background:#eeeaff;
+    color:#7041d8;
 }
 
 .container{
-    padding:18px;
-    max-width:800px;
+    width:100%;
+    max-width:850px;
     margin:auto;
+    padding:17px;
 }
 
 .section{
@@ -168,144 +191,237 @@ input:focus,textarea:focus{
     display:block;
 }
 
-.card{
-    background:white;
-    border-radius:18px;
-    padding:18px;
-    margin:12px 0;
-    box-shadow:0 5px 18px rgba(0,50,120,.08);
-}
+/* ================= HOME ================= */
 
 .hero{
-    background:linear-gradient(135deg,#0066ff,#00aaff);
+    background:linear-gradient(135deg,#315bea,#7b4ce2);
     color:white;
+    padding:24px;
     border-radius:20px;
-    padding:25px;
-    margin-bottom:18px;
+    margin-bottom:15px;
 }
 
 .hero h1{
-    margin-bottom:8px;
+    margin-bottom:7px;
 }
 
-/* SUBJECTS */
+/* ================= MIDDLE MENU ================= */
+
+.middle-menu{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin:15px 0;
+}
+
+.menu-btn{
+    background:white;
+    border-radius:17px;
+    padding:15px 5px;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+    font-weight:bold;
+    color:#30344b;
+}
+
+.menu-btn span{
+    display:block;
+    font-size:27px;
+    margin-bottom:5px;
+}
+
+.menu-btn:nth-child(1){
+    border-top:4px solid #315bea;
+}
+
+.menu-btn:nth-child(2){
+    border-top:4px solid #16a673;
+}
+
+.menu-btn:nth-child(3){
+    border-top:4px solid #ff9d27;
+}
+
+.menu-btn:nth-child(4){
+    border-top:4px solid #e94b8a;
+}
+
+.menu-btn:nth-child(5){
+    border-top:4px solid #7b4ce2;
+}
+
+/* ================= CARDS ================= */
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:17px;
+    margin:12px 0;
+    box-shadow:0 5px 20px rgba(40,40,80,.07);
+}
+
+/* ================= SUBJECTS ================= */
 
 .subject-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:12px;
+    gap:11px;
+    margin-top:15px;
 }
 
 .subject{
     background:white;
+    padding:17px 8px;
     border-radius:16px;
-    padding:18px 10px;
     text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.06);
-    color:#0066ff;
+    box-shadow:0 4px 15px rgba(0,0,0,.06);
     font-weight:bold;
 }
 
 .subject span{
     display:block;
-    font-size:30px;
-    margin-bottom:8px;
+    font-size:28px;
+    margin-bottom:7px;
 }
 
-/* PDF */
+/* ================= PDF ================= */
 
 .pdf-btn{
     display:inline-block;
-    background:#0066ff;
-    color:white;
+    margin-top:10px;
     padding:11px 15px;
     border-radius:10px;
-    margin-top:10px;
+    background:#16a673;
+    color:white;
     text-decoration:none;
 }
 
-/* VIDEO */
+/* ================= VIDEO ================= */
 
 .video-box{
-    margin-top:12px;
-    border-radius:15px;
+    width:100%;
     overflow:hidden;
+    border-radius:15px;
+    margin-top:10px;
 }
 
 .video-box iframe{
     width:100%;
-    height:220px;
+    height:230px;
     border:0;
 }
 
-/* COMMUNITY */
+/* ================= COMMUNITY ================= */
 
 .post{
-    border-left:4px solid #0066ff;
+    border-left:4px solid #7b4ce2;
 }
 
-.post-name{
+.post-user{
+    color:#315bea;
     font-weight:bold;
-    color:#0066ff;
-    margin-bottom:5px;
 }
 
-/* RANK */
+.post-text{
+    margin-top:10px;
+    line-height:1.45;
+    white-space:pre-wrap;
+}
+
+.post-actions{
+    display:flex;
+    gap:8px;
+    margin-top:12px;
+}
+
+.edit-btn,
+.delete-btn{
+    padding:7px 11px;
+    border-radius:8px;
+    font-size:12px;
+}
+
+.edit-btn{
+    background:#eeeaff;
+    color:#7041d8;
+}
+
+.delete-btn{
+    background:#ffe7e7;
+    color:#d33;
+}
+
+/* ================= RANK ================= */
 
 .rank-card{
     text-align:center;
-    background:linear-gradient(135deg,#0066ff,#00aaff);
-    color:white;
-    border-radius:20px;
     padding:25px;
+    border-radius:20px;
+    background:linear-gradient(135deg,#fff0d7,#fff8ed);
 }
 
-.rank-card .rank{
-    font-size:28px;
+.rank-name{
+    font-size:27px;
     font-weight:bold;
+    color:#d57b00;
     margin:10px 0;
 }
 
-/* BOTTOM NAV */
+/* ================= BOTTOM ================= */
 
 .bottom-nav{
     position:fixed;
     bottom:0;
     left:0;
     right:0;
+    z-index:20;
     background:white;
+    box-shadow:0 -4px 18px rgba(0,0,0,.1);
+    display:flex;
+    justify-content:center;
+}
+
+.bottom-inner{
+    width:100%;
+    max-width:850px;
     display:flex;
     justify-content:space-around;
-    padding:8px 3px;
-    box-shadow:0 -5px 20px rgba(0,0,0,.12);
-    z-index:20;
 }
 
 .bottom-nav button{
-    background:none;
+    background:white;
+    padding:9px 25px;
     color:#777;
     font-size:12px;
-    padding:7px;
 }
 
 .bottom-nav button.active{
-    color:#0066ff;
+    color:#315bea;
     font-weight:bold;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
-@media(max-width:400px){
-    .subject-grid{
-        grid-template-columns:1fr 1fr;
+@media(max-width:450px){
+
+    .middle-menu{
+        grid-template-columns:repeat(3,1fr);
     }
 
-    .header h2{
-        font-size:17px;
+    .menu-btn{
+        font-size:11px;
+    }
+
+    .top-stats{
+        flex-direction:column;
+        gap:3px;
+    }
+
+    .stat{
+        padding:5px 8px;
     }
 
     .video-box iframe{
-        height:190px;
+        height:200px;
     }
 }
 </style>
@@ -313,194 +429,243 @@ input:focus,textarea:focus{
 
 <body>
 
-<!-- LOGIN -->
+<!-- ================= LOGIN ================= -->
 
 <div id="loginPage">
 
 <div class="login-box">
 
-<div class="logo">AB<br>ICSE</div>
+<div class="logo">
+AB<br>ICSE
+</div>
 
 <h1>AB ICSE</h1>
-<p>Learn • Practice • Improve</p>
 
-<div id="phoneSection">
+<p>Learn • Practice • Achieve</p>
+
+<div id="phoneStep">
 
 <input
 id="phone"
 type="tel"
-placeholder="Enter mobile number"
-maxlength="10">
+placeholder="10-digit mobile number"
+maxlength="10"
+inputmode="numeric">
 
-<button class="primary-btn" onclick="sendOTP()">
-Send OTP
+<div id="recaptcha-container"></div>
+
+<button
+class="primary-btn"
+onclick="sendOTP()">
+📱 Send OTP
 </button>
-
-<p style="font-size:12px;margin-top:12px;">
-Demo OTP is generated on this device.
-</p>
 
 </div>
 
-<div id="otpSection" class="hidden">
+<div id="otpStep" class="hidden">
 
 <input
 id="otp"
-type="number"
+type="text"
+inputmode="numeric"
 placeholder="Enter 6-digit OTP"
 maxlength="6">
 
-<button class="primary-btn" onclick="verifyOTP()">
-Verify OTP
+<button
+class="primary-btn"
+onclick="verifyOTP()">
+🔐 Verify OTP
 </button>
 
-<button class="secondary-btn" onclick="backToPhone()">
+<button
+class="primary-btn"
+style="background:#777"
+onclick="location.reload()">
 Change number
 </button>
 
-<p id="otpMessage" style="margin-top:12px;"></p>
-
 </div>
 
 </div>
 </div>
 
 
-<!-- MAIN APP -->
+<!-- ================= APP ================= -->
 
 <div id="app" class="hidden">
 
-<div class="header">
+<header class="header">
 
-<div style="display:flex;align-items:center;gap:10px;">
-<div class="small-logo">AB<br>ICSE</div>
-<h2>AB ICSE</h2>
+<div class="brand">
+
+<div class="small-logo">
+AB<br>ICSE
 </div>
 
-<div class="xp-badge">
-⚡ <span id="headerXP">0</span> XP
+<div class="brand-name">
+AB ICSE
 </div>
 
 </div>
 
+<div class="top-stats">
 
-<div class="container">
+<div class="stat xp-stat">
+⚡ <span id="topXP">0</span> XP
+</div>
+
+<div class="stat rank-stat">
+🏆 <span id="topRank">Beginner</span>
+</div>
+
+</div>
+
+</header>
+
+
+<main class="container">
 
 <!-- HOME -->
 
-<div id="home" class="section active">
+<section id="home" class="section active">
 
 <div class="hero">
 
-<h1>Welcome to AB ICSE 👋</h1>
+<h1>Hello, <span id="studentName">Student</span> 👋</h1>
 
 <p>
-Study smarter, practice daily and earn XP.
+Welcome to your ICSE learning space.
 </p>
 
 </div>
 
-<div class="rank-card">
+<!-- CENTER MENU -->
 
-<div>Your Rank</div>
+<div class="middle-menu">
 
-<div class="rank" id="rankName">
-🌱 Beginner
-</div>
+<button class="menu-btn"
+onclick="showSection('subjects')">
+<span>📚</span>
+Subjects
+</button>
 
-<div>
-<span id="homeXP">0</span> XP
-</div>
+<button class="menu-btn"
+onclick="showSection('notes')">
+<span>📄</span>
+Notes
+</button>
+
+<button class="menu-btn"
+onclick="showSection('videos')">
+<span>🎥</span>
+Videos
+</button>
+
+<button class="menu-btn"
+onclick="showSection('doubts')">
+<span>❓</span>
+Doubts
+</button>
+
+<button class="menu-btn"
+onclick="showSection('community')">
+<span>👥</span>
+Community
+</button>
 
 </div>
 
 <div class="card">
 
-<h3>📚 Continue Learning</h3>
+<h3>⚡ Your XP</h3>
 
-<p style="margin-top:8px;color:#666;">
-Watch lectures and complete DPPs to earn XP.
+<h1 style="color:#d57b00;margin-top:8px">
+<span id="homeXP">0</span> XP
+</h1>
+
+<p style="color:#777;margin-top:5px">
+2 XP per lecture minute • 4 XP per correct DPP question
 </p>
 
 </div>
 
-</div>
+</section>
 
 
 <!-- SUBJECTS -->
 
-<div id="subjects" class="section">
+<section id="subjects" class="section">
 
 <h2>📚 Subjects</h2>
 
-<div class="subject-grid" style="margin-top:15px;">
+<div class="subject-grid">
 
-<div class="subject" onclick="openSubject('English')">
-<span>📖</span>
-English
+<div class="subject"
+onclick="openSubject('English')">
+<span>📖</span>English
 </div>
 
-<div class="subject" onclick="openSubject('Hindi')">
-<span>📝</span>
-Hindi
+<div class="subject"
+onclick="openSubject('Hindi')">
+<span>📝</span>Hindi
 </div>
 
-<div class="subject" onclick="openSubject('Mathematics')">
-<span>➗</span>
-Mathematics
+<div class="subject"
+onclick="openSubject('Mathematics')">
+<span>➗</span>Mathematics
 </div>
 
-<div class="subject" onclick="openSubject('Physics')">
-<span>⚡</span>
-Physics
+<div class="subject"
+onclick="openSubject('Physics')">
+<span>⚡</span>Physics
 </div>
 
-<div class="subject" onclick="openSubject('Chemistry')">
-<span>🧪</span>
-Chemistry
+<div class="subject"
+onclick="openSubject('Chemistry')">
+<span>🧪</span>Chemistry
 </div>
 
-<div class="subject" onclick="openSubject('Biology')">
-<span>🧬</span>
-Biology
+<div class="subject"
+onclick="openSubject('Biology')">
+<span>🧬</span>Biology
 </div>
 
-<div class="subject" onclick="openSubject('History & Civics')">
-<span>🏛️</span>
-History & Civics
+<div class="subject"
+onclick="openSubject('History & Civics')">
+<span>🏛️</span>History & Civics
 </div>
 
-<div class="subject" onclick="openSubject('Geography')">
-<span>🌍</span>
-Geography
+<div class="subject"
+onclick="openSubject('Geography')">
+<span>🌍</span>Geography
 </div>
 
-<div class="subject" onclick="openSubject('Computer Applications')">
-<span>💻</span>
-Computer
+<div class="subject"
+onclick="openSubject('Computer Applications')">
+<span>💻</span>Computer
 </div>
 
-<div class="subject" onclick="openSubject('Second Language')">
-<span>🗣️</span>
-Second Language
-</div>
-
+<div class="subject"
+onclick="openSubject('Second Language')">
+<span>🗣️</span>Second Language
 </div>
 
 </div>
+
+</section>
 
 
 <!-- NOTES -->
 
-<div id="notes" class="section">
+<section id="notes" class="section">
 
-<h2>📄 Notes & PDFs</h2>
+<h2>📄 Notes</h2>
 
 <div class="card">
 
 <h3>Mathematics</h3>
 
-<p>Chapter 1 Notes</p>
+<p>Chapter 1</p>
 
 <a
 class="pdf-btn"
@@ -515,7 +680,7 @@ target="_blank">
 
 <h3>Physics</h3>
 
-<p>Chapter 1 Notes</p>
+<p>Chapter 1</p>
 
 <a
 class="pdf-btn"
@@ -526,12 +691,12 @@ target="_blank">
 
 </div>
 
-</div>
+</section>
 
 
 <!-- VIDEOS -->
 
-<div id="videos" class="section">
+<section id="videos" class="section">
 
 <h2>🎥 Lectures</h2>
 
@@ -548,20 +713,20 @@ allowfullscreen>
 
 </div>
 
-<p style="margin-top:10px;color:#666;">
-Lecture XP: 2 XP per minute watched.
+<p style="margin-top:10px;color:#777">
+Lecture XP: 2 XP for each minute actually watched.
 </p>
 
 </div>
 
-</div>
+</section>
 
 
 <!-- DOUBTS -->
 
-<div id="doubts" class="section">
+<section id="doubts" class="section">
 
-<h2>❓ Ask a Doubt</h2>
+<h2>❓ Doubts</h2>
 
 <div class="card">
 
@@ -572,71 +737,72 @@ placeholder="Subject">
 <textarea
 id="doubtText"
 rows="5"
-placeholder="Write your doubt here..."></textarea>
+placeholder="Write your doubt...">
+</textarea>
 
 <button
-class="primary-btn"
+class="primary-btn green-btn"
 onclick="submitDoubt()">
 Submit Doubt
 </button>
 
 </div>
 
-</div>
+</section>
 
 
 <!-- COMMUNITY -->
 
-<div id="community" class="section">
+<section id="community" class="section">
 
 <h2>👥 Student Community</h2>
 
 <div class="card">
 
+<p style="color:#777">
+Your phone number will never be displayed in community posts.
+</p>
+
+<input
+id="displayName"
+placeholder="Display name"
+maxlength="30">
+
 <textarea
-id="communityText"
-rows="3"
-placeholder="Share something with students...">
+id="postText"
+rows="4"
+placeholder="Write a post..."
+maxlength="500">
 </textarea>
 
 <button
-class="primary-btn"
-onclick="addPost()">
+class="primary-btn purple-btn"
+onclick="createPost()">
 Post
 </button>
 
 </div>
 
 <div id="posts">
-
-<div class="card post">
-
-<div class="post-name">
-AB ICSE Student
-</div>
-
-<p>
-Welcome to the AB ICSE community! 🎓
+<p style="text-align:center;color:#888">
+Loading posts...
 </p>
-
 </div>
 
-</div>
-
-</div>
+</section>
 
 
 <!-- RANK -->
 
-<div id="rank" class="section">
+<section id="rank" class="section">
 
-<h2>🏆 My Progress</h2>
+<h2>🏆 Rank & XP</h2>
 
-<div class="rank-card" style="margin-top:15px;">
+<div class="rank-card" style="margin-top:15px">
 
 <div>Current Rank</div>
 
-<div class="rank" id="bigRank">
+<div class="rank-name" id="bigRank">
 🌱 Beginner
 </div>
 
@@ -650,38 +816,25 @@ Welcome to the AB ICSE community! 🎓
 
 <h3>Rank System</h3>
 
-<p style="margin-top:10px;">🌱 Level 1 — Beginner: 0–499 XP</p>
-<p>📘 Level 2 — Learner: 500–1,499 XP</p>
-<p>🔥 Level 3 — Achiever: 1,500–2,999 XP</p>
-<p>⭐ Level 4 — Scholar: 3,000–5,999 XP</p>
-<p>🏆 Level 5 — Master: 6,000–9,999 XP</p>
-<p>👑 Level 6 — ICSE Champion: 10,000+ XP</p>
+<p>🌱 Beginner — 0–499 XP</p>
+<p>📘 Learner — 500–1,499 XP</p>
+<p>🔥 Achiever — 1,500–2,999 XP</p>
+<p>⭐ Scholar — 3,000–5,999 XP</p>
+<p>🏆 Master — 6,000–9,999 XP</p>
+<p>👑 ICSE Champion — 10,000+ XP</p>
 
 </div>
 
-<div class="card">
-
-<h3>⚡ XP Rules</h3>
-
-<p style="margin-top:10px;">
-🎥 Lecture: 2 XP per minute
-</p>
-
-<p>
-📝 DPP: 4 XP per correct question
-</p>
-
-</div>
-
-</div>
+</section>
 
 
 <!-- SUBJECT DETAIL -->
 
-<div id="subjectDetail" class="section">
+<section id="subjectDetail" class="section">
 
 <button
-class="secondary-btn"
+class="primary-btn"
+style="width:auto;background:#777"
 onclick="showSection('subjects')">
 ← Back
 </button>
@@ -690,43 +843,25 @@ onclick="showSection('subjects')">
 
 <h2 id="subjectTitle"></h2>
 
-<p style="margin-top:10px;">
+<p style="margin-top:10px;color:#777">
 Notes, lectures and DPPs for this subject will appear here.
 </p>
 
 </div>
 
-</div>
+</section>
 
-</div>
+</main>
 
 
-<!-- BOTTOM NAV -->
+<!-- BOTTOM: ONLY HOME + RANK -->
 
-<div class="bottom-nav">
+<nav class="bottom-nav">
+
+<div class="bottom-inner">
 
 <button onclick="showSection('home')">
 🏠<br>Home
-</button>
-
-<button onclick="showSection('subjects')">
-📚<br>Subjects
-</button>
-
-<button onclick="showSection('notes')">
-📄<br>Notes
-</button>
-
-<button onclick="showSection('videos')">
-🎥<br>Videos
-</button>
-
-<button onclick="showSection('doubts')">
-❓<br>Doubts
-</button>
-
-<button onclick="showSection('community')">
-👥<br>Community
 </button>
 
 <button onclick="showSection('rank')">
@@ -735,264 +870,432 @@ Notes, lectures and DPPs for this subject will appear here.
 
 </div>
 
+</nav>
+
 </div>
 
 
-<script>
+<!-- ==================================================
+     FIREBASE
+================================================== -->
 
-/* =========================
-   DEMO OTP
-========================= */
+<script type="module">
 
-let generatedOTP = "";
+import {
+    initializeApp
+} from
+"https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 
-function sendOTP(){
+import {
+    getAuth,
+    RecaptchaVerifier,
+    signInWithPhoneNumber,
+    onAuthStateChanged
+} from
+"https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 
-    const phone =
-        document.getElementById("phone").value.trim();
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    query,
+    orderBy,
+    onSnapshot,
+    serverTimestamp,
+    doc,
+    updateDoc,
+    deleteDoc
+} from
+"https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
-    if(phone.length !== 10){
 
-        alert("Please enter a valid 10-digit mobile number.");
+/* ==================================================
+   🔥 PASTE YOUR FIREBASE CONFIG HERE
+   ==================================================
+
+   Firebase Console
+   → Project settings
+   → Your apps
+   → Web app
+   → Config
+
+   Replace ONLY the values below.
+
+================================================== */
+
+const firebaseConfig = {
+
+    apiKey: "PASTE_API_KEY_HERE",
+
+    authDomain:
+        "PASTE_PROJECT_ID.firebaseapp.com",
+
+    projectId:
+        "PASTE_PROJECT_ID_HERE",
+
+    storageBucket:
+        "PASTE_PROJECT_ID.firebasestorage.app",
+
+    messagingSenderId:
+        "PASTE_MESSAGING_SENDER_ID_HERE",
+
+    appId:
+        "PASTE_APP_ID_HERE"
+
+};
+
+
+/* ==================================================
+   INITIALIZE FIREBASE
+================================================== */
+
+const firebaseApp =
+    initializeApp(firebaseConfig);
+
+const auth =
+    getAuth(firebaseApp);
+
+const db =
+    getFirestore(firebaseApp);
+
+let confirmationResult = null;
+
+
+/* ==================================================
+   RECAPTCHA
+================================================== */
+
+window.recaptchaVerifier =
+    new RecaptchaVerifier(
+        auth,
+        "recaptcha-container",
+        {
+            size:"normal"
+        }
+    );
+
+
+/* ==================================================
+   SEND REAL SMS OTP
+================================================== */
+
+window.sendOTP = async function(){
+
+    let phone =
+        document
+        .getElementById("phone")
+        .value
+        .trim();
+
+    if(!/^[0-9]{10}$/.test(phone)){
+
+        alert(
+            "Enter a valid 10-digit Indian mobile number."
+        );
 
         return;
     }
 
-    generatedOTP =
-        Math.floor(100000 + Math.random() * 900000)
-        .toString();
+    phone = "+91" + phone;
 
-    document.getElementById("phoneSection")
+    try{
+
+        confirmationResult =
+            await signInWithPhoneNumber(
+                auth,
+                phone,
+                window.recaptchaVerifier
+            );
+
+        document
+        .getElementById("phoneStep")
         .classList.add("hidden");
 
-    document.getElementById("otpSection")
+        document
+        .getElementById("otpStep")
         .classList.remove("hidden");
 
-    document.getElementById("otpMessage").innerText =
-        "Demo OTP: " + generatedOTP;
-}
+        alert(
+            "The OTP has been sent by SMS."
+        );
 
+    }catch(error){
 
-function verifyOTP(){
+        console.error(error);
 
-    const otp =
-        document.getElementById("otp").value.trim();
-
-    if(otp === generatedOTP){
-
-        document.getElementById("loginPage")
-            .classList.add("hidden");
-
-        document.getElementById("app")
-            .classList.remove("hidden");
-
-    }else{
-
-        alert("Incorrect OTP.");
+        alert(
+            "Could not send OTP.\n\n" +
+            error.message
+        );
 
     }
 
-}
+};
 
 
-function backToPhone(){
+/* ==================================================
+   VERIFY OTP
+================================================== */
 
-    document.getElementById("otpSection")
+window.verifyOTP = async function(){
+
+    const otp =
+        document
+        .getElementById("otp")
+        .value
+        .trim();
+
+    if(!confirmationResult){
+
+        alert(
+            "Please request an OTP first."
+        );
+
+        return;
+    }
+
+    if(!/^[0-9]{6}$/.test(otp)){
+
+        alert(
+            "Enter the 6-digit OTP."
+        );
+
+        return;
+    }
+
+    try{
+
+        await confirmationResult.confirm(otp);
+
+        document
+        .getElementById("loginPage")
         .classList.add("hidden");
 
-    document.getElementById("phoneSection")
+        document
+        .getElementById("app")
         .classList.remove("hidden");
 
-}
+    }catch(error){
+
+        console.error(error);
+
+        alert(
+            "Incorrect or expired OTP."
+        );
+
+    }
+
+};
 
 
-/* =========================
+/* ==================================================
+   AUTH STATE
+================================================== */
+
+onAuthStateChanged(
+    auth,
+    user => {
+
+        if(user){
+
+            document
+            .getElementById("loginPage")
+            .classList.add("hidden");
+
+            document
+            .getElementById("app")
+            .classList.remove("hidden");
+
+            loadPosts();
+
+        }
+
+    }
+);
+
+
+/* ==================================================
    NAVIGATION
-========================= */
+================================================== */
 
-function showSection(id){
+window.showSection = function(id){
 
-    document.querySelectorAll(".section")
-        .forEach(section => {
-            section.classList.remove("active");
-        });
+    document
+    .querySelectorAll(".section")
+    .forEach(
+        section =>
+        section.classList.remove("active")
+    );
 
-    const target =
+    const section =
         document.getElementById(id);
 
-    if(target){
-        target.classList.add("active");
+    if(section){
+
+        section.classList.add("active");
+
     }
 
     window.scrollTo({
         top:0,
         behavior:"smooth"
     });
-}
+
+};
 
 
-/* =========================
+/* ==================================================
    SUBJECT
-========================= */
+================================================== */
 
-function openSubject(subject){
+window.openSubject = function(subject){
 
-    document.getElementById("subjectTitle")
-        .innerText = subject;
+    document
+    .getElementById("subjectTitle")
+    .innerText = subject;
 
     showSection("subjectDetail");
 
-}
+};
 
 
-/* =========================
+/* ==================================================
    DOUBT
-========================= */
+================================================== */
 
-function submitDoubt(){
+window.submitDoubt = function(){
 
     const subject =
-        document.getElementById("doubtSubject").value.trim();
+        document
+        .getElementById("doubtSubject")
+        .value
+        .trim();
 
-    const doubt =
-        document.getElementById("doubtText").value.trim();
+    const text =
+        document
+        .getElementById("doubtText")
+        .value
+        .trim();
 
-    if(!subject || !doubt){
+    if(!subject || !text){
 
-        alert("Please fill in both fields.");
+        alert(
+            "Please enter the subject and doubt."
+        );
 
         return;
     }
 
     alert(
-        "Your doubt has been submitted in demo mode."
+        "Doubt submitted. Your teacher/mentor database can be connected here."
     );
 
-    document.getElementById("doubtSubject").value="";
-    document.getElementById("doubtText").value="";
-
-}
+};
 
 
-/* =========================
-   COMMUNITY
-========================= */
+/* ==================================================
+   CREATE COMMUNITY POST
+================================================== */
 
-function addPost(){
+window.createPost = async function(){
 
-    const text =
-        document.getElementById("communityText")
-        .value.trim();
+    const user =
+        auth.currentUser;
 
-    if(!text){
+    if(!user){
 
-        alert("Please write something first.");
+        alert(
+            "Please log in first."
+        );
 
         return;
     }
 
-    const post =
-        document.createElement("div");
+    const name =
+        document
+        .getElementById("displayName")
+        .value
+        .trim();
 
-    post.className="card post";
+    const text =
+        document
+        .getElementById("postText")
+        .value
+        .trim();
 
-    post.innerHTML =
-        "<div class='post-name'>You</div>" +
-        "<p>" + escapeHTML(text) + "</p>";
+    if(!name || !text){
 
-    document.getElementById("posts")
-        .prepend(post);
+        alert(
+            "Enter a display name and message."
+        );
 
-    document.getElementById("communityText")
+        return;
+    }
+
+    try{
+
+        await addDoc(
+            collection(
+                db,
+                "communityPosts"
+            ),
+            {
+
+                uid:user.uid,
+
+                displayName:
+                    name.substring(0,30),
+
+                text:
+                    text.substring(0,500),
+
+                createdAt:
+                    serverTimestamp(),
+
+                updatedAt:
+                    serverTimestamp()
+
+            }
+        );
+
+        document
+        .getElementById("postText")
         .value="";
 
-}
+    }catch(error){
 
+        console.error(error);
 
-/* =========================
-   SECURITY HELPER
-========================= */
-
-function escapeHTML(text){
-
-    const div =
-        document.createElement("div");
-
-    div.textContent=text;
-
-    return div.innerHTML;
-}
-
-
-/* =========================
-   XP SYSTEM — DEMO
-========================= */
-
-let xp = 0;
-
-
-function addLectureXP(minutes){
-
-    xp += Math.floor(minutes * 2);
-
-    updateXP();
-
-}
-
-
-function addDPPXP(correctQuestions){
-
-    xp += Math.floor(correctQuestions * 4);
-
-    updateXP();
-
-}
-
-
-function updateXP(){
-
-    document.getElementById("headerXP")
-        .innerText=xp;
-
-    document.getElementById("homeXP")
-        .innerText=xp;
-
-    document.getElementById("bigXP")
-        .innerText=xp;
-
-    let rank="🌱 Beginner";
-
-    if(xp >= 10000){
-
-        rank="👑 ICSE Champion";
-
-    }else if(xp >= 6000){
-
-        rank="🏆 Master";
-
-    }else if(xp >= 3000){
-
-        rank="⭐ Scholar";
-
-    }else if(xp >= 1500){
-
-        rank="🔥 Achiever";
-
-    }else if(xp >= 500){
-
-        rank="📘 Learner";
+        alert(
+            "Could not publish the post."
+        );
 
     }
 
-    document.getElementById("rankName")
-        .innerText=rank;
+};
 
-    document.getElementById("bigRank")
-        .innerText=rank;
 
-}
+/* ==================================================
+   LOAD COMMUNITY POSTS
+================================================== */
 
-</script>
+function loadPosts(){
 
-</body>
-</html>
+    const q =
+        query(
+            collection(
+                db,
+                "communityPosts"
+            ),
+            orderBy(
+                "createdAt",
+                "desc"
+            )
+        );
+
+    onSnapshot(
+        q,
+        snapshot => {
+
+            const container =
+                document
