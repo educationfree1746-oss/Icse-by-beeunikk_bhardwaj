@@ -1,76 +1,641 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="bb67iYsiFCkjhYnx_uedMqIeVNo44OGrGqP1xosWnUE" />
-  <title>ICSE Study Hub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="google-site-verification"
+content="KWy4Jf7SYdAFLb8-fOc6aUM2hg3fsdn1pElxtMMU7Gw">
+
+<title>AB ICSE | beeunikk_bhardwaj</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f8ff;
+    color: #102a43;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+/* LOGIN */
+
+#loginPage {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(145deg, #0757c9, #eaf4ff);
+}
+
+.login-box {
+    width: 100%;
+    max-width: 390px;
+    background: white;
+    padding: 30px 24px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    background: linear-gradient(145deg, #0757c9 50%, white 50%);
+    border: 5px solid #0757c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0757c9;
+    font-size: 21px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+
+.login-box h1 {
+    color: #0757c9;
+    margin-bottom: 8px;
+}
+
+.login-box p {
+    color: #66788a;
+    margin-bottom: 25px;
+}
+
+.input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccd9e8;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #0757c9;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 15px;
+    background: #0757c9;
+    color: white;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.primary-btn:hover {
+    background: #0647a7;
+}
+
+#otpSection {
+    display: none;
+}
+
+/* APP */
+
+#app {
+    display: none;
+    min-height: 100vh;
+}
+
+.header {
+    background: linear-gradient(135deg, #0757c9, #167be8);
+    color: white;
+    padding: 22px;
+    border-radius: 0 0 25px 25px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.small-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    color: #0757c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.header h2 {
+    font-size: 22px;
+}
+
+.header p {
+    opacity: .85;
+    margin-top: 4px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 25px 18px 100px;
+}
+
+.welcome {
+    margin-bottom: 20px;
+}
+
+.welcome h2 {
+    color: #102a43;
+}
+
+.welcome p {
+    color: #718096;
+    margin-top: 5px;
+}
+
+/* CARDS */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px 15px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,.07);
+    transition: .2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    color: #0757c9;
+}
+
+.card p {
+    color: #7b8794;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* SUBJECTS */
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.back-btn {
+    background: #e7f0ff;
+    color: #0757c9;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+.subject {
+    background: white;
+    padding: 18px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 12px rgba(0,0,0,.06);
+}
+
+.subject-name {
+    font-weight: bold;
+}
+
+.subject button {
+    background: #0757c9;
+    color: white;
+    padding: 9px 13px;
+    border-radius: 9px;
+}
+
+/* BOTTOM NAV */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -4px 20px rgba(0,0,0,.1);
+}
+
+.nav-btn {
+    background: none;
+    color: #718096;
+    text-align: center;
+    font-size: 12px;
+}
+
+.nav-btn span {
+    display: block;
+    font-size: 23px;
+    margin-bottom: 3px;
+}
+
+.nav-btn.active {
+    color: #0757c9;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 700px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+</style>
 </head>
+
 <body>
-  <section>
-    <h2>Study Materials</h2>
+
+<!-- LOGIN PAGE -->
+
+<div id="loginPage">
+
+    <div class="login-box">
+
+        <div class="logo">
+            AB<br>ICSE
+        </div>
+
+        <div id="phoneSection">
+            <h1>AB ICSE</h1>
+            <p>Learn. Practice. Achieve.</p>
+
+            <input
+                id="phone"
+                class="input"
+                type="tel"
+                maxlength="10"
+                placeholder="Enter mobile number"
+            >
+
+            <button class="primary-btn" onclick="sendOTP()">
+                Send OTP
+            </button>
+        </div>
+
+        <div id="otpSection">
+            <h1>Verify OTP</h1>
+            <p id="otpMessage">OTP sent to your mobile number</p>
+
+            <input
+                id="otp"
+                class="input"
+                type="number"
+                maxlength="6"
+                placeholder="Enter 6-digit OTP"
+            >
+
+            <button class="primary-btn" onclick="verifyOTP()">
+                Verify & Continue
+            </button>
+
+            <br><br>
+
+            <button onclick="backToPhone()"
+                    style="background:none;color:#0757c9;">
+                Change mobile number
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- MAIN APP -->
+
+<div id="app">
+
+    <header class="header">
+
+        <div class="header-content">
+
+            <div class="small-logo">
+                AB<br>ICSE
+            </div>
+
+            <div>
+                <h2>AB ICSE</h2>
+                <p>by beeunikk_bhardwaj</p>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- HOME -->
+
+        <section id="home" class="section active">
+
+            <div class="welcome">
+                <h2>Welcome to AB ICSE 👋</h2>
+                <p>Your ICSE learning platform</p>
+            </div>
+
+            <div class="grid">
+
+                <div class="card" onclick="showSection('subjects')">
+                    <div class="card-icon">📚</div>
+                    <h3>Subjects</h3>
+                    <p>Explore ICSE subjects</p>
+                </div>
+
+                <div class="card" onclick="showSection('notes')">
+                    <div class="card-icon">📝</div>
+                    <h3>Notes</h3>
+                    <p>Study your notes</p>
+                </div>
+
+                <div class="card" onclick="showSection('doubts')">
+                    <div class="card-icon">❓</div>
+                    <h3>Doubts</h3>
+                    <p>Ask your doubts</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📖</div>
+                    <h3>Practice</h3>
+                    <p>Practice questions</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUBJECTS -->
+
+        <section id="subjects" class="section">
+
+            <button class="back-btn" onclick="showSection('home')">
+                ← Back
+            </button>
+
+            <h2>ICSE Subjects</h2>
+            <br>
+
+            <div class="subject">
+                <span class="subject-name">English</span>
+                <button onclick="openSubject('English')">Open</button>
+            </div>
+
+            <div class="subject">
+                <span class="subject-name">Hindi</span>
+                <button onclick="openSubject('Hindi')">Open</button>
+            </div>
+
+            <div class="subject">
+                <span class="subject-name">Mathematics</span>
+                <button onclick="openSubject('Mathematics')">Open</button>
+            </div>
+
+            <div class="subject">
+                <span class="subject-name">Physics</span>
+                <button onclick="openSubject('Physics')">Open</button>
+            </div>
+
+            <div class="subject">
+                <span class="subject-name">Chemistry</span>
+                <button onclick="openSubject('Chemistry')">Open</button>
+            </div>
+
+            <div class="subject">
+                <span class="subject-name">Biology</span>
+                <button onclick="openSubject('Biology')">Open</button>
+            </div>
+
+            <div class="subject">
+                <span class="subject-name">History & Civics</span>
+                <button onclick="openSubject('History & Civics')">Open</button>
+            </div>
+
+            <div class="subject">
+                <span class="subject-name">Geography</span>
+                <button onclick="openSubject('Geography')">Open</button>
+            </div>
+
+            <div class="subject">
+                <span class="subject-name">Computer Applications</span>
+                <button onclick="openSubject('Computer Applications')">Open</button>
+            </div>
+
+            <div class="subject">
+                <span class="subject-name">Second Language</span>
+                <button onclick="openSubject('Second Language')">Open</button>
+            </div>
+
+        </section>
+
+
+        <!-- NOTES -->
+
+        <section id="notes" class="section">
+
+            <button class="back-btn" onclick="showSection('home')">
+                ← Back
+            </button>
+
+            <h2>📝 Notes</h2>
+
+            <br>
+
+            <div class="card">
+                <div class="card-icon">📚</div>
+                <h3>Subject Notes</h3>
+                <p>Chapter-wise notes will appear here.</p>
+            </div>
+
+        </section>
+
+
+        <!-- DOUBTS -->
+
+        <section id="doubts" class="section">
+
+            <button class="back-btn" onclick="showSection('home')">
+                ← Back
+            </button>
+
+            <h2>❓ Doubts</h2>
+
+            <br>
+
+            <div class="card">
+                <div class="card-icon">💬</div>
+                <h3>Ask a Doubt</h3>
+                <p>Students will be able to ask questions here.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- BOTTOM NAV -->
+
+    <nav class="bottom-nav">
+
+        <button class="nav-btn active"
+                onclick="showSection('home')">
+            <span>🏠</span>
+            Home
+        </button>
+
+        <button class="nav-btn"
+                onclick="showSection('subjects')">
+            <span>📚</span>
+            Subjects
+        </button>
+
+        <button class="nav-btn"
+                onclick="showSection('notes')">
+            <span>📝</span>
+            Notes
+        </button>
+
+        <button class="nav-btn"
+                onclick="showSection('doubts')">
+            <span>❓</span>
+            Doubts
+        </button>
+
+    </nav>
+
+</div>
+
 
 <script>
-const username = "Beeunikk_Bhardwaj";
-const repository = "ICSE-by-Beeunikk_Bhardwaj";
-const folder = "materials";
 
-const container = document.getElementById("materials");
+let generatedOTP = "";
 
-fetch(`https://api.github.com/repos/${username}/${repository}/contents/${folder}`)
-    .then(response => response.json())
-    .then(files => {
-        container.innerHTML = "";
 
-        files.forEach(file => {
-            const url = file.download_url;
-            const name = file.name;
-            const extension = name.split(".").pop().toLowerCase();
+/* SEND OTP */
 
-            if (["png", "jpg", "jpeg", "gif", "webp"].includes(extension)) {
-                const img = document.createElement("img");
-                img.src = url;
-                img.alt = name;
-                img.style.maxWidth = "100%";
-                img.style.display = "block";
-                img.style.margin = "15px auto";
-                container.appendChild(img);
-            }
+function sendOTP() {
 
-            else if (["mp4", "webm", "ogg"].includes(extension)) {
-                const video = document.createElement("video");
-                video.src = url;
-                video.controls = true;
-                video.style.width = "100%";
-                video.style.maxWidth = "800px";
-                container.appendChild(video);
-            }
+    const phone = document.getElementById("phone").value;
 
-            else if (extension === "pdf") {
-                const pdf = document.createElement("a");
-                pdf.href = url;
-                pdf.target = "_blank";
-                pdf.textContent = "📄 Open " + name;
-                pdf.style.display = "block";
-                pdf.style.margin = "15px";
-                container.appendChild(pdf);
-            }
+    if (phone.length !== 10 || isNaN(phone)) {
+        alert("Please enter a valid 10-digit mobile number.");
+        return;
+    }
 
-            else {
-                const link = document.createElement("a");
-                link.href = url;
-                link.target = "_blank";
-                link.download = name;
-                link.textContent = "📁 Download " + name;
-                link.style.display = "block";
-                link.style.margin = "15px";
-                container.appendChild(link);
-            }
-        });
-    })
-    .catch(error => {
-        container.innerHTML = "Unable to load materials.";
+    generatedOTP =
+        Math.floor(100000 + Math.random() * 900000).toString();
+
+    document.getElementById("phoneSection").style.display = "none";
+    document.getElementById("otpSection").style.display = "block";
+
+    document.getElementById("otpMessage").innerText =
+        "Demo OTP: " + generatedOTP;
+}
+
+
+/* VERIFY OTP */
+
+function verifyOTP() {
+
+    const enteredOTP =
+        document.getElementById("otp").value;
+
+    if (enteredOTP === generatedOTP) {
+
+        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("app").style.display = "block";
+
+    } else {
+
+        alert("Incorrect OTP. Please try again.");
+
+    }
+}
+
+
+/* CHANGE NUMBER */
+
+function backToPhone() {
+
+    document.getElementById("otpSection").style.display = "none";
+    document.getElementById("phoneSection").style.display = "block";
+
+}
+
+
+/* NAVIGATION */
+
+function showSection(sectionID) {
+
+    const sections =
+        document.querySelectorAll(".section");
+
+    sections.forEach(section => {
+        section.classList.remove("active");
     });
+
+    document.getElementById(sectionID)
+        .classList.add("active");
+
+    window.scrollTo(0, 0);
+}
+
+
+/* SUBJECT */
+
+function openSubject(subject) {
+
+    alert(
+        subject +
+        " section is ready for chapters, notes, questions and doubts."
+    );
+
+}
+
 </script>
+
 </body>
 </html>
