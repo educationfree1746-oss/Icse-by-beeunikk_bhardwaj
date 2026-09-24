@@ -10,277 +10,302 @@ content="KWy4Jf7SYdAFLb8-fOc6aUM2hg3fsdn1pElxtMMU7Gw">
 <title>AB ICSE | beeunikk_bhardwaj</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
 }
 
-body {
-    background: #f4f8ff;
-    color: #102a43;
+body{
+    background:#f4f8ff;
+    color:#102a43;
 }
 
-button {
-    cursor: pointer;
-    border: none;
+button{
+    border:0;
+    cursor:pointer;
 }
 
-/* LOGIN */
-
-#loginPage {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background: linear-gradient(145deg, #0757c9, #eaf4ff);
+.login-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    background:linear-gradient(145deg,#0757c9,#eaf4ff);
 }
 
-.login-box {
-    width: 100%;
-    max-width: 390px;
-    background: white;
-    padding: 30px 24px;
-    border-radius: 25px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+.login-box{
+    width:100%;
+    max-width:390px;
+    background:white;
+    padding:30px 24px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
-.logo {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    background: linear-gradient(145deg, #0757c9 50%, white 50%);
-    border: 5px solid #0757c9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #0757c9;
-    font-size: 21px;
-    font-weight: bold;
-    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+.logo{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    margin:0 auto 20px;
+    background:linear-gradient(145deg,#0757c9 50%,white 50%);
+    border:5px solid #0757c9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#0757c9;
+    font-size:20px;
+    font-weight:bold;
 }
 
-.login-box h1 {
-    color: #0757c9;
-    margin-bottom: 8px;
+.login-box h1{
+    color:#0757c9;
+    margin-bottom:8px;
 }
 
-.login-box p {
-    color: #66788a;
-    margin-bottom: 25px;
+.login-box p{
+    color:#66788a;
+    margin-bottom:20px;
 }
 
-.input {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ccd9e8;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    outline: none;
+.input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccd9e8;
+    border-radius:12px;
+    margin-bottom:14px;
+    font-size:16px;
+    outline:none;
 }
 
-.input:focus {
-    border-color: #0757c9;
+.primary-btn{
+    width:100%;
+    padding:14px;
+    background:#0757c9;
+    color:white;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:bold;
 }
 
-.primary-btn {
-    width: 100%;
-    padding: 15px;
-    background: #0757c9;
-    color: white;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.primary-btn:hover {
-    background: #0647a7;
-}
-
-#otpSection {
-    display: none;
+#otpSection{
+    display:none;
 }
 
 /* APP */
 
-#app {
-    display: none;
-    min-height: 100vh;
+#app{
+    display:none;
+    min-height:100vh;
 }
 
-.header {
-    background: linear-gradient(135deg, #0757c9, #167be8);
-    color: white;
-    padding: 22px;
-    border-radius: 0 0 25px 25px;
+.header{
+    background:linear-gradient(135deg,#0757c9,#167be8);
+    color:white;
+    padding:20px;
+    border-radius:0 0 25px 25px;
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.header-content{
+    display:flex;
+    align-items:center;
+    gap:14px;
 }
 
-.small-logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: white;
-    color: #0757c9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 14px;
+.small-logo{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:white;
+    color:#0757c9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-weight:bold;
 }
 
-.header h2 {
-    font-size: 22px;
+.header h2{
+    font-size:21px;
 }
 
-.header p {
-    opacity: .85;
-    margin-top: 4px;
+.header p{
+    margin-top:4px;
+    opacity:.9;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 25px 18px 100px;
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:25px 18px 100px;
 }
 
-.welcome {
-    margin-bottom: 20px;
+.section{
+    display:none;
 }
 
-.welcome h2 {
-    color: #102a43;
+.section.active{
+    display:block;
 }
 
-.welcome p {
-    color: #718096;
-    margin-top: 5px;
+.welcome{
+    margin-bottom:22px;
 }
 
-/* CARDS */
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+.welcome h2{
+    margin-bottom:5px;
 }
 
-.card {
-    background: white;
-    border-radius: 18px;
-    padding: 25px 15px;
-    text-align: center;
-    box-shadow: 0 5px 18px rgba(0,0,0,.07);
-    transition: .2s;
+.welcome p{
+    color:#718096;
 }
 
-.card:hover {
-    transform: translateY(-3px);
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
 }
 
-.card-icon {
-    font-size: 35px;
-    margin-bottom: 12px;
+.card{
+    background:white;
+    border-radius:18px;
+    padding:23px 15px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+    margin-bottom:15px;
 }
 
-.card h3 {
-    color: #0757c9;
+.card-icon{
+    font-size:34px;
+    margin-bottom:10px;
 }
 
-.card p {
-    color: #7b8794;
-    font-size: 13px;
-    margin-top: 5px;
+.card h3{
+    color:#0757c9;
 }
 
-/* SUBJECTS */
-
-.section {
-    display: none;
+.card p{
+    color:#7b8794;
+    font-size:13px;
+    margin-top:5px;
 }
 
-.section.active {
-    display: block;
+.subject{
+    background:white;
+    padding:17px;
+    border-radius:15px;
+    margin-bottom:12px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 3px 12px rgba(0,0,0,.06);
 }
 
-.back-btn {
-    background: #e7f0ff;
-    color: #0757c9;
-    padding: 10px 15px;
-    border-radius: 10px;
-    margin-bottom: 18px;
-    font-weight: bold;
+.subject-name{
+    font-weight:bold;
 }
 
-.subject {
-    background: white;
-    padding: 18px;
-    border-radius: 15px;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 3px 12px rgba(0,0,0,.06);
+.subject button,
+.action-btn{
+    background:#0757c9;
+    color:white;
+    padding:9px 13px;
+    border-radius:9px;
 }
 
-.subject-name {
-    font-weight: bold;
+.back-btn{
+    background:#e7f0ff;
+    color:#0757c9;
+    padding:10px 15px;
+    border-radius:10px;
+    margin-bottom:18px;
+    font-weight:bold;
 }
 
-.subject button {
-    background: #0757c9;
-    color: white;
-    padding: 9px 13px;
-    border-radius: 9px;
+.content-card{
+    background:white;
+    padding:20px;
+    border-radius:17px;
+    margin-top:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.06);
 }
 
-/* BOTTOM NAV */
-
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    height: 70px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0 -4px 20px rgba(0,0,0,.1);
+.content-card h3{
+    color:#0757c9;
+    margin-bottom:10px;
 }
 
-.nav-btn {
-    background: none;
-    color: #718096;
-    text-align: center;
-    font-size: 12px;
+.pdf-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#0757c9;
+    color:white;
+    padding:11px 15px;
+    border-radius:10px;
+    margin-top:10px;
 }
 
-.nav-btn span {
-    display: block;
-    font-size: 23px;
-    margin-bottom: 3px;
+.video-box{
+    width:100%;
+    aspect-ratio:16/9;
+    border-radius:12px;
+    overflow:hidden;
+    margin-top:10px;
 }
 
-.nav-btn.active {
-    color: #0757c9;
+.video-box iframe{
+    width:100%;
+    height:100%;
+    border:0;
 }
 
-/* RESPONSIVE */
+textarea{
+    width:100%;
+    min-height:130px;
+    padding:14px;
+    border:1px solid #ccd9e8;
+    border-radius:12px;
+    resize:vertical;
+    font-size:15px;
+    outline:none;
+}
 
-@media (min-width: 700px) {
-    .grid {
-        grid-template-columns: repeat(4, 1fr);
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:70px;
+    background:white;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    box-shadow:0 -4px 20px rgba(0,0,0,.1);
+}
+
+.nav-btn{
+    background:none;
+    color:#718096;
+    text-align:center;
+    font-size:12px;
+}
+
+.nav-btn span{
+    display:block;
+    font-size:22px;
+    margin-bottom:3px;
+}
+
+.nav-btn.active{
+    color:#0757c9;
+}
+
+@media(min-width:700px){
+    .grid{
+        grid-template-columns:repeat(4,1fr);
     }
 }
 </style>
@@ -288,263 +313,415 @@ button {
 
 <body>
 
-<!-- LOGIN PAGE -->
+<!-- LOGIN -->
 
-<div id="loginPage">
+<div id="loginPage" class="login-page">
 
-    <div class="login-box">
+<div class="login-box">
 
-        <div class="logo">
-            AB<br>ICSE
-        </div>
+<div class="logo">
+AB<br>ICSE
+</div>
 
-        <div id="phoneSection">
-            <h1>AB ICSE</h1>
-            <p>Learn. Practice. Achieve.</p>
+<div id="phoneSection">
 
-            <input
-                id="phone"
-                class="input"
-                type="tel"
-                maxlength="10"
-                placeholder="Enter mobile number"
-            >
+<h1>AB ICSE</h1>
 
-            <button class="primary-btn" onclick="sendOTP()">
-                Send OTP
-            </button>
-        </div>
+<p>Learn. Practice. Achieve.</p>
 
-        <div id="otpSection">
-            <h1>Verify OTP</h1>
-            <p id="otpMessage">OTP sent to your mobile number</p>
+<input
+id="phone"
+class="input"
+type="tel"
+maxlength="10"
+placeholder="Enter mobile number">
 
-            <input
-                id="otp"
-                class="input"
-                type="number"
-                maxlength="6"
-                placeholder="Enter 6-digit OTP"
-            >
-
-            <button class="primary-btn" onclick="verifyOTP()">
-                Verify & Continue
-            </button>
-
-            <br><br>
-
-            <button onclick="backToPhone()"
-                    style="background:none;color:#0757c9;">
-                Change mobile number
-            </button>
-        </div>
-
-    </div>
+<button class="primary-btn" onclick="sendOTP()">
+Send OTP
+</button>
 
 </div>
 
+<div id="otpSection">
 
-<!-- MAIN APP -->
+<h1>Verify OTP</h1>
+
+<p id="otpMessage">
+Enter the OTP
+</p>
+
+<input
+id="otp"
+class="input"
+type="number"
+maxlength="6"
+placeholder="Enter OTP">
+
+<button class="primary-btn" onclick="verifyOTP()">
+Verify & Continue
+</button>
+
+<br><br>
+
+<button
+onclick="backToPhone()"
+style="background:none;color:#0757c9;">
+Change mobile number
+</button>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- APP -->
 
 <div id="app">
 
-    <header class="header">
+<header class="header">
 
-        <div class="header-content">
+<div class="header-content">
 
-            <div class="small-logo">
-                AB<br>ICSE
-            </div>
+<div class="small-logo">
+AB<br>ICSE
+</div>
 
-            <div>
-                <h2>AB ICSE</h2>
-                <p>by beeunikk_bhardwaj</p>
-            </div>
+<div>
+<h2>AB ICSE</h2>
+<p>by beeunikk_bhardwaj</p>
+</div>
 
-        </div>
+</div>
 
-    </header>
-
-
-    <main class="container">
-
-        <!-- HOME -->
-
-        <section id="home" class="section active">
-
-            <div class="welcome">
-                <h2>Welcome to AB ICSE 👋</h2>
-                <p>Your ICSE learning platform</p>
-            </div>
-
-            <div class="grid">
-
-                <div class="card" onclick="showSection('subjects')">
-                    <div class="card-icon">📚</div>
-                    <h3>Subjects</h3>
-                    <p>Explore ICSE subjects</p>
-                </div>
-
-                <div class="card" onclick="showSection('notes')">
-                    <div class="card-icon">📝</div>
-                    <h3>Notes</h3>
-                    <p>Study your notes</p>
-                </div>
-
-                <div class="card" onclick="showSection('doubts')">
-                    <div class="card-icon">❓</div>
-                    <h3>Doubts</h3>
-                    <p>Ask your doubts</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">📖</div>
-                    <h3>Practice</h3>
-                    <p>Practice questions</p>
-                </div>
-
-            </div>
-
-        </section>
+</header>
 
 
-        <!-- SUBJECTS -->
-
-        <section id="subjects" class="section">
-
-            <button class="back-btn" onclick="showSection('home')">
-                ← Back
-            </button>
-
-            <h2>ICSE Subjects</h2>
-            <br>
-
-            <div class="subject">
-                <span class="subject-name">English</span>
-                <button onclick="openSubject('English')">Open</button>
-            </div>
-
-            <div class="subject">
-                <span class="subject-name">Hindi</span>
-                <button onclick="openSubject('Hindi')">Open</button>
-            </div>
-
-            <div class="subject">
-                <span class="subject-name">Mathematics</span>
-                <button onclick="openSubject('Mathematics')">Open</button>
-            </div>
-
-            <div class="subject">
-                <span class="subject-name">Physics</span>
-                <button onclick="openSubject('Physics')">Open</button>
-            </div>
-
-            <div class="subject">
-                <span class="subject-name">Chemistry</span>
-                <button onclick="openSubject('Chemistry')">Open</button>
-            </div>
-
-            <div class="subject">
-                <span class="subject-name">Biology</span>
-                <button onclick="openSubject('Biology')">Open</button>
-            </div>
-
-            <div class="subject">
-                <span class="subject-name">History & Civics</span>
-                <button onclick="openSubject('History & Civics')">Open</button>
-            </div>
-
-            <div class="subject">
-                <span class="subject-name">Geography</span>
-                <button onclick="openSubject('Geography')">Open</button>
-            </div>
-
-            <div class="subject">
-                <span class="subject-name">Computer Applications</span>
-                <button onclick="openSubject('Computer Applications')">Open</button>
-            </div>
-
-            <div class="subject">
-                <span class="subject-name">Second Language</span>
-                <button onclick="openSubject('Second Language')">Open</button>
-            </div>
-
-        </section>
+<main class="container">
 
 
-        <!-- NOTES -->
+<!-- HOME -->
 
-        <section id="notes" class="section">
+<section id="home" class="section active">
 
-            <button class="back-btn" onclick="showSection('home')">
-                ← Back
-            </button>
+<div class="welcome">
 
-            <h2>📝 Notes</h2>
+<h2>Welcome to AB ICSE 👋</h2>
 
-            <br>
+<p>Your ICSE learning platform</p>
 
-            <div class="card">
-                <div class="card-icon">📚</div>
-                <h3>Subject Notes</h3>
-                <p>Chapter-wise notes will appear here.</p>
-            </div>
+</div>
 
-        </section>
+<div class="grid">
+
+<div class="card" onclick="showSection('subjects')">
+<div class="card-icon">📚</div>
+<h3>Subjects</h3>
+<p>Explore subjects</p>
+</div>
+
+<div class="card" onclick="showSection('notes')">
+<div class="card-icon">📄</div>
+<h3>Notes</h3>
+<p>PDF study material</p>
+</div>
+
+<div class="card" onclick="showSection('videos')">
+<div class="card-icon">🎥</div>
+<h3>Videos</h3>
+<p>Learn through videos</p>
+</div>
+
+<div class="card" onclick="showSection('doubts')">
+<div class="card-icon">❓</div>
+<h3>Doubts</h3>
+<p>Ask your doubt</p>
+</div>
+
+</div>
+
+</section>
 
 
-        <!-- DOUBTS -->
+<!-- SUBJECTS -->
 
-        <section id="doubts" class="section">
+<section id="subjects" class="section">
 
-            <button class="back-btn" onclick="showSection('home')">
-                ← Back
-            </button>
+<button class="back-btn" onclick="showSection('home')">
+← Back
+</button>
 
-            <h2>❓ Doubts</h2>
+<h2>📚 ICSE Subjects</h2>
 
-            <br>
+<br>
 
-            <div class="card">
-                <div class="card-icon">💬</div>
-                <h3>Ask a Doubt</h3>
-                <p>Students will be able to ask questions here.</p>
-            </div>
+<div class="subject">
+<span class="subject-name">English</span>
+<button onclick="openSubject('English')">Open</button>
+</div>
 
-        </section>
+<div class="subject">
+<span class="subject-name">Hindi</span>
+<button onclick="openSubject('Hindi')">Open</button>
+</div>
 
-    </main>
+<div class="subject">
+<span class="subject-name">Mathematics</span>
+<button onclick="openSubject('Mathematics')">Open</button>
+</div>
+
+<div class="subject">
+<span class="subject-name">Physics</span>
+<button onclick="openSubject('Physics')">Open</button>
+</div>
+
+<div class="subject">
+<span class="subject-name">Chemistry</span>
+<button onclick="openSubject('Chemistry')">Open</button>
+</div>
+
+<div class="subject">
+<span class="subject-name">Biology</span>
+<button onclick="openSubject('Biology')">Open</button>
+</div>
+
+<div class="subject">
+<span class="subject-name">History & Civics</span>
+<button onclick="openSubject('History & Civics')">Open</button>
+</div>
+
+<div class="subject">
+<span class="subject-name">Geography</span>
+<button onclick="openSubject('Geography')">Open</button>
+</div>
+
+<div class="subject">
+<span class="subject-name">Computer Applications</span>
+<button onclick="openSubject('Computer Applications')">Open</button>
+</div>
+
+<div class="subject">
+<span class="subject-name">Second Language</span>
+<button onclick="openSubject('Second Language')">Open</button>
+</div>
+
+</section>
 
 
-    <!-- BOTTOM NAV -->
+<!-- NOTES -->
 
-    <nav class="bottom-nav">
+<section id="notes" class="section">
 
-        <button class="nav-btn active"
-                onclick="showSection('home')">
-            <span>🏠</span>
-            Home
-        </button>
+<button class="back-btn" onclick="showSection('home')">
+← Back
+</button>
 
-        <button class="nav-btn"
-                onclick="showSection('subjects')">
-            <span>📚</span>
-            Subjects
-        </button>
+<h2>📄 Notes & PDFs</h2>
 
-        <button class="nav-btn"
-                onclick="showSection('notes')">
-            <span>📝</span>
-            Notes
-        </button>
+<div class="content-card">
 
-        <button class="nav-btn"
-                onclick="showSection('doubts')">
-            <span>❓</span>
-            Doubts
-        </button>
+<h3>Mathematics — Chapter 1</h3>
 
-    </nav>
+<p>
+Click below to open the PDF notes.
+</p>
+
+<a class="pdf-btn"
+href="pdf/mathematics-chapter-1.pdf"
+target="_blank">
+📄 Open PDF
+</a>
+
+</div>
+
+<div class="content-card">
+
+<h3>Physics — Chapter 1</h3>
+
+<p>
+Click below to open the PDF notes.
+</p>
+
+<a class="pdf-btn"
+href="pdf/physics-chapter-1.pdf"
+target="_blank">
+📄 Open PDF
+</a>
+
+</div>
+
+</section>
+
+
+<!-- VIDEOS -->
+
+<section id="videos" class="section">
+
+<button class="back-btn" onclick="showSection('home')">
+← Back
+</button>
+
+<h2>🎥 Videos</h2>
+
+<div class="content-card">
+
+<h3>Mathematics Video</h3>
+
+<div class="video-box">
+
+<iframe
+src="https://www.youtube.com/embed/VIDEO_ID"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DOUBTS -->
+
+<section id="doubts" class="section">
+
+<button class="back-btn" onclick="showSection('home')">
+← Back
+</button>
+
+<h2>❓ Ask Your Doubt</h2>
+
+<div class="content-card">
+
+<h3>Submit a Doubt</h3>
+
+<br>
+
+<input
+id="doubtSubject"
+class="input"
+placeholder="Subject">
+
+<textarea
+id="doubtText"
+placeholder="Write your doubt here...">
+</textarea>
+
+<br><br>
+
+<button
+class="primary-btn"
+onclick="submitDoubt()">
+Submit Doubt
+</button>
+
+</div>
+
+</section>
+
+
+<!-- SUBJECT DETAIL -->
+
+<section id="subjectDetail" class="section">
+
+<button class="back-btn" onclick="showSection('subjects')">
+← Back
+</button>
+
+<h2 id="subjectTitle">Subject</h2>
+
+<div class="content-card">
+
+<h3>📄 Notes</h3>
+
+<p>
+Chapter-wise PDF notes for this subject.
+</p>
+
+<a
+class="pdf-btn"
+href="pdf/sample.pdf"
+target="_blank">
+Open PDF
+</a>
+
+</div>
+
+<div class="content-card">
+
+<h3>🎥 Videos</h3>
+
+<p>
+Watch the lesson video below.
+</p>
+
+<div class="video-box">
+
+<iframe
+src="https://www.youtube.com/embed/VIDEO_ID"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+<div class="content-card">
+
+<h3>❓ Doubts</h3>
+
+<p>
+Have a question about this subject?
+</p>
+
+<br>
+
+<button
+class="action-btn"
+onclick="showSection('doubts')">
+Ask a Doubt
+</button>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- BOTTOM NAV -->
+
+<nav class="bottom-nav">
+
+<button
+class="nav-btn active"
+onclick="showSection('home')">
+<span>🏠</span>
+Home
+</button>
+
+<button
+class="nav-btn"
+onclick="showSection('subjects')">
+<span>📚</span>
+Subjects
+</button>
+
+<button
+class="nav-btn"
+onclick="showSection('notes')">
+<span>📄</span>
+Notes
+</button>
+
+<button
+class="nav-btn"
+onclick="showSection('doubts')">
+<span>❓</span>
+Doubts
+</button>
+
+</nav>
 
 </div>
 
@@ -554,84 +731,139 @@ button {
 let generatedOTP = "";
 
 
-/* SEND OTP */
+/* DEMO OTP */
 
-function sendOTP() {
+function sendOTP(){
 
-    const phone = document.getElementById("phone").value;
+const phone =
+document.getElementById("phone").value;
 
-    if (phone.length !== 10 || isNaN(phone)) {
-        alert("Please enter a valid 10-digit mobile number.");
-        return;
-    }
+if(phone.length !== 10 || isNaN(phone)){
 
-    generatedOTP =
-        Math.floor(100000 + Math.random() * 900000).toString();
+alert("Please enter a valid 10-digit mobile number.");
 
-    document.getElementById("phoneSection").style.display = "none";
-    document.getElementById("otpSection").style.display = "block";
+return;
+}
 
-    document.getElementById("otpMessage").innerText =
-        "Demo OTP: " + generatedOTP;
+generatedOTP =
+Math.floor(100000 + Math.random()*900000).toString();
+
+document.getElementById("phoneSection")
+.style.display="none";
+
+document.getElementById("otpSection")
+.style.display="block";
+
+/*
+DEMO ONLY:
+The OTP is shown on the screen.
+Real SMS OTP needs a backend.
+*/
+
+document.getElementById("otpMessage")
+.innerText =
+"Demo OTP: " + generatedOTP;
+
 }
 
 
-/* VERIFY OTP */
+/* VERIFY */
 
-function verifyOTP() {
+function verifyOTP(){
 
-    const enteredOTP =
-        document.getElementById("otp").value;
+const entered =
+document.getElementById("otp").value;
 
-    if (enteredOTP === generatedOTP) {
+if(entered === generatedOTP){
 
-        document.getElementById("loginPage").style.display = "none";
-        document.getElementById("app").style.display = "block";
+document.getElementById("loginPage")
+.style.display="none";
 
-    } else {
+document.getElementById("app")
+.style.display="block";
 
-        alert("Incorrect OTP. Please try again.");
+}else{
 
-    }
+alert("Incorrect OTP.");
+
+}
+
 }
 
 
 /* CHANGE NUMBER */
 
-function backToPhone() {
+function backToPhone(){
 
-    document.getElementById("otpSection").style.display = "none";
-    document.getElementById("phoneSection").style.display = "block";
+document.getElementById("otpSection")
+.style.display="none";
+
+document.getElementById("phoneSection")
+.style.display="block";
 
 }
 
 
-/* NAVIGATION */
+/* SECTIONS */
 
-function showSection(sectionID) {
+function showSection(id){
 
-    const sections =
-        document.querySelectorAll(".section");
+document
+.querySelectorAll(".section")
+.forEach(section=>{
+section.classList.remove("active");
+});
 
-    sections.forEach(section => {
-        section.classList.remove("active");
-    });
+document
+.getElementById(id)
+.classList.add("active");
 
-    document.getElementById(sectionID)
-        .classList.add("active");
+window.scrollTo(0,0);
 
-    window.scrollTo(0, 0);
 }
 
 
 /* SUBJECT */
 
-function openSubject(subject) {
+function openSubject(subject){
 
-    alert(
-        subject +
-        " section is ready for chapters, notes, questions and doubts."
-    );
+document.getElementById("subjectTitle")
+.innerText =
+"📚 " + subject;
+
+showSection("subjectDetail");
+
+}
+
+
+/* DOUBT */
+
+function submitDoubt(){
+
+const subject =
+document.getElementById("doubtSubject").value;
+
+const doubt =
+document.getElementById("doubtText").value;
+
+if(subject === "" || doubt === ""){
+
+alert("Please enter subject and your doubt.");
+
+return;
+
+}
+
+alert(
+"Your doubt has been submitted.\n\n" +
+"Subject: " + subject
+);
+
+document.getElementById("doubtSubject")
+.value="";
+
+document.getElementById("doubtText")
+.value="";
 
 }
 
