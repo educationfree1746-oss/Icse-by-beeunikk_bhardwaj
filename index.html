@@ -31,7 +31,7 @@ button{
     display:none!important;
 }
 
-/* ================= LOGIN ================= */
+/* LOGIN */
 
 #loginPage{
     min-height:100vh;
@@ -87,8 +87,7 @@ input,textarea{
     outline:none;
 }
 
-input:focus,
-textarea:focus{
+input:focus,textarea:focus{
     border-color:#7b4ce2;
 }
 
@@ -107,11 +106,7 @@ textarea:focus{
     background:#16a673;
 }
 
-.purple-btn{
-    background:#7b4ce2;
-}
-
-/* ================= APP ================= */
+/* APP */
 
 #app{
     min-height:100vh;
@@ -191,7 +186,15 @@ textarea:focus{
     display:block;
 }
 
-/* ================= HOME ================= */
+/* CARDS */
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:17px;
+    margin:12px 0;
+    box-shadow:0 5px 20px rgba(40,40,80,.07);
+}
 
 .hero{
     background:linear-gradient(135deg,#315bea,#7b4ce2);
@@ -205,7 +208,7 @@ textarea:focus{
     margin-bottom:7px;
 }
 
-/* ================= MIDDLE MENU ================= */
+/* CENTER MENU */
 
 .middle-menu{
     display:grid;
@@ -229,37 +232,13 @@ textarea:focus{
     margin-bottom:5px;
 }
 
-.menu-btn:nth-child(1){
-    border-top:4px solid #315bea;
-}
+.menu-btn:nth-child(1){border-top:4px solid #315bea}
+.menu-btn:nth-child(2){border-top:4px solid #16a673}
+.menu-btn:nth-child(3){border-top:4px solid #ff9d27}
+.menu-btn:nth-child(4){border-top:4px solid #e94b8a}
+.menu-btn:nth-child(5){border-top:4px solid #7b4ce2}
 
-.menu-btn:nth-child(2){
-    border-top:4px solid #16a673;
-}
-
-.menu-btn:nth-child(3){
-    border-top:4px solid #ff9d27;
-}
-
-.menu-btn:nth-child(4){
-    border-top:4px solid #e94b8a;
-}
-
-.menu-btn:nth-child(5){
-    border-top:4px solid #7b4ce2;
-}
-
-/* ================= CARDS ================= */
-
-.card{
-    background:white;
-    border-radius:18px;
-    padding:17px;
-    margin:12px 0;
-    box-shadow:0 5px 20px rgba(40,40,80,.07);
-}
-
-/* ================= SUBJECTS ================= */
+/* SUBJECTS */
 
 .subject-grid{
     display:grid;
@@ -283,36 +262,10 @@ textarea:focus{
     margin-bottom:7px;
 }
 
-/* ================= PDF ================= */
-
-.pdf-btn{
-    display:inline-block;
-    margin-top:10px;
-    padding:11px 15px;
-    border-radius:10px;
-    background:#16a673;
-    color:white;
-    text-decoration:none;
-}
-
-/* ================= VIDEO ================= */
-
-.video-box{
-    width:100%;
-    overflow:hidden;
-    border-radius:15px;
-    margin-top:10px;
-}
-
-.video-box iframe{
-    width:100%;
-    height:230px;
-    border:0;
-}
-
-/* ================= COMMUNITY ================= */
+/* POSTS */
 
 .post{
+    position:relative;
     border-left:4px solid #7b4ce2;
 }
 
@@ -321,10 +274,15 @@ textarea:focus{
     font-weight:bold;
 }
 
+.post-time{
+    color:#999;
+    font-size:11px;
+    margin-top:3px;
+}
+
 .post-text{
     margin-top:10px;
     line-height:1.45;
-    white-space:pre-wrap;
 }
 
 .post-actions{
@@ -350,7 +308,7 @@ textarea:focus{
     color:#d33;
 }
 
-/* ================= RANK ================= */
+/* RANK */
 
 .rank-card{
     text-align:center;
@@ -366,7 +324,34 @@ textarea:focus{
     margin:10px 0;
 }
 
-/* ================= BOTTOM ================= */
+/* VIDEO */
+
+.video-box{
+    width:100%;
+    overflow:hidden;
+    border-radius:15px;
+    margin-top:10px;
+}
+
+.video-box iframe{
+    width:100%;
+    height:230px;
+    border:0;
+}
+
+/* PDF */
+
+.pdf-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:11px 15px;
+    border-radius:10px;
+    background:#16a673;
+    color:white;
+    text-decoration:none;
+}
+
+/* BOTTOM */
 
 .bottom-nav{
     position:fixed;
@@ -389,7 +374,7 @@ textarea:focus{
 
 .bottom-nav button{
     background:white;
-    padding:9px 25px;
+    padding:9px 16px;
     color:#777;
     font-size:12px;
 }
@@ -398,8 +383,6 @@ textarea:focus{
     color:#315bea;
     font-weight:bold;
 }
-
-/* ================= MOBILE ================= */
 
 @media(max-width:450px){
 
@@ -419,17 +402,13 @@ textarea:focus{
     .stat{
         padding:5px 8px;
     }
-
-    .video-box iframe{
-        height:200px;
-    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- ================= LOGIN ================= -->
+<!-- LOGIN -->
 
 <div id="loginPage">
 
@@ -448,16 +427,15 @@ AB<br>ICSE
 <input
 id="phone"
 type="tel"
-placeholder="10-digit mobile number"
-maxlength="10"
-inputmode="numeric">
+placeholder="Mobile number"
+maxlength="10">
 
 <div id="recaptcha-container"></div>
 
 <button
 class="primary-btn"
 onclick="sendOTP()">
-📱 Send OTP
+Send 6-Digit OTP
 </button>
 
 </div>
@@ -468,13 +446,13 @@ onclick="sendOTP()">
 id="otp"
 type="text"
 inputmode="numeric"
-placeholder="Enter 6-digit OTP"
+placeholder="Enter OTP"
 maxlength="6">
 
 <button
 class="primary-btn"
 onclick="verifyOTP()">
-🔐 Verify OTP
+Verify OTP
 </button>
 
 <button
@@ -490,7 +468,7 @@ Change number
 </div>
 
 
-<!-- ================= APP ================= -->
+<!-- APP -->
 
 <div id="app" class="hidden">
 
@@ -539,8 +517,6 @@ Welcome to your ICSE learning space.
 
 </div>
 
-<!-- CENTER MENU -->
-
 <div class="middle-menu">
 
 <button class="menu-btn"
@@ -584,7 +560,7 @@ Community
 </h1>
 
 <p style="color:#777;margin-top:5px">
-2 XP per lecture minute • 4 XP per correct DPP question
+2 XP/min lecture • 4 XP/correct DPP question
 </p>
 
 </div>
@@ -671,7 +647,7 @@ onclick="openSubject('Second Language')">
 class="pdf-btn"
 href="pdf/mathematics-chapter-1.pdf"
 target="_blank">
-📄 Open PDF
+Open PDF
 </a>
 
 </div>
@@ -686,7 +662,7 @@ target="_blank">
 class="pdf-btn"
 href="pdf/physics-chapter-1.pdf"
 target="_blank">
-📄 Open PDF
+Open PDF
 </a>
 
 </div>
@@ -760,12 +736,12 @@ Submit Doubt
 <div class="card">
 
 <p style="color:#777">
-Your phone number will never be displayed in community posts.
+Use a display name. Your phone number will not be shown in community posts.
 </p>
 
 <input
 id="displayName"
-placeholder="Display name"
+placeholder="Your display name"
 maxlength="30">
 
 <textarea
@@ -776,7 +752,7 @@ maxlength="500">
 </textarea>
 
 <button
-class="primary-btn purple-btn"
+class="primary-btn"
 onclick="createPost()">
 Post
 </button>
@@ -802,7 +778,8 @@ Loading posts...
 
 <div>Current Rank</div>
 
-<div class="rank-name" id="bigRank">
+<div class="rank-name"
+id="bigRank">
 🌱 Beginner
 </div>
 
@@ -854,7 +831,7 @@ Notes, lectures and DPPs for this subject will appear here.
 </main>
 
 
-<!-- BOTTOM: ONLY HOME + RANK -->
+<!-- BOTTOM -->
 
 <nav class="bottom-nav">
 
@@ -875,9 +852,7 @@ Notes, lectures and DPPs for this subject will appear here.
 </div>
 
 
-<!-- ==================================================
-     FIREBASE
-================================================== -->
+<!-- FIREBASE -->
 
 <script type="module">
 
@@ -909,61 +884,49 @@ import {
 "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
 
-/* ==================================================
-   🔥 PASTE YOUR FIREBASE CONFIG HERE
-   ==================================================
-
-   Firebase Console
-   → Project settings
-   → Your apps
-   → Web app
-   → Config
-
-   Replace ONLY the values below.
-
-================================================== */
+/*
+=================================================
+PASTE YOUR FIREBASE CONFIG HERE
+=================================================
+Firebase Console:
+Project settings → Your apps → Web app
+=================================================
+*/
 
 const firebaseConfig = {
 
-    apiKey: "PASTE_API_KEY_HERE",
+    apiKey: "YOUR_API_KEY",
 
     authDomain:
-        "PASTE_PROJECT_ID.firebaseapp.com",
+        "YOUR_PROJECT_ID.firebaseapp.com",
 
     projectId:
-        "PASTE_PROJECT_ID_HERE",
+        "YOUR_PROJECT_ID",
 
     storageBucket:
-        "PASTE_PROJECT_ID.firebasestorage.app",
+        "YOUR_PROJECT_ID.firebasestorage.app",
 
     messagingSenderId:
-        "PASTE_MESSAGING_SENDER_ID_HERE",
+        "YOUR_MESSAGING_SENDER_ID",
 
     appId:
-        "PASTE_APP_ID_HERE"
+        "YOUR_APP_ID"
 
 };
 
 
-/* ==================================================
-   INITIALIZE FIREBASE
-================================================== */
+const app = initializeApp(firebaseConfig);
 
-const firebaseApp =
-    initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
-const auth =
-    getAuth(firebaseApp);
-
-const db =
-    getFirestore(firebaseApp);
+const db = getFirestore(app);
 
 let confirmationResult = null;
 
 
-/* ==================================================
+/* =========================
    RECAPTCHA
-================================================== */
+========================= */
 
 window.recaptchaVerifier =
     new RecaptchaVerifier(
@@ -975,19 +938,17 @@ window.recaptchaVerifier =
     );
 
 
-/* ==================================================
-   SEND REAL SMS OTP
-================================================== */
+/* =========================
+   SEND OTP
+========================= */
 
 window.sendOTP = async function(){
 
     let phone =
-        document
-        .getElementById("phone")
-        .value
-        .trim();
+        document.getElementById("phone")
+        .value.trim();
 
-    if(!/^[0-9]{10}$/.test(phone)){
+    if(phone.length !== 10){
 
         alert(
             "Enter a valid 10-digit Indian mobile number."
@@ -1008,57 +969,64 @@ window.sendOTP = async function(){
             );
 
         document
-        .getElementById("phoneStep")
-        .classList.add("hidden");
+            .getElementById("phoneStep")
+            .classList.add("hidden");
 
         document
-        .getElementById("otpStep")
-        .classList.remove("hidden");
+            .getElementById("otpStep")
+            .classList.remove("hidden");
 
-        alert(
-            "The OTP has been sent by SMS."
-        );
+        alert("OTP sent to your mobile.");
 
     }catch(error){
 
         console.error(error);
 
         alert(
-            "Could not send OTP.\n\n" +
+            "OTP could not be sent: " +
             error.message
         );
+
+        try{
+
+            window.recaptchaVerifier.clear();
+
+            window.recaptchaVerifier =
+                new RecaptchaVerifier(
+                    auth,
+                    "recaptcha-container",
+                    {
+                        size:"normal"
+                    }
+                );
+
+        }catch(e){}
 
     }
 
 };
 
 
-/* ==================================================
+/* =========================
    VERIFY OTP
-================================================== */
+========================= */
 
 window.verifyOTP = async function(){
 
     const otp =
-        document
-        .getElementById("otp")
-        .value
-        .trim();
+        document.getElementById("otp")
+        .value.trim();
 
     if(!confirmationResult){
 
-        alert(
-            "Please request an OTP first."
-        );
+        alert("Please request an OTP first.");
 
         return;
     }
 
-    if(!/^[0-9]{6}$/.test(otp)){
+    if(otp.length !== 6){
 
-        alert(
-            "Enter the 6-digit OTP."
-        );
+        alert("Enter the 6-digit OTP.");
 
         return;
     }
@@ -1068,29 +1036,27 @@ window.verifyOTP = async function(){
         await confirmationResult.confirm(otp);
 
         document
-        .getElementById("loginPage")
-        .classList.add("hidden");
+            .getElementById("loginPage")
+            .classList.add("hidden");
 
         document
-        .getElementById("app")
-        .classList.remove("hidden");
+            .getElementById("app")
+            .classList.remove("hidden");
 
     }catch(error){
 
         console.error(error);
 
-        alert(
-            "Incorrect or expired OTP."
-        );
+        alert("Incorrect or expired OTP.");
 
     }
 
 };
 
 
-/* ==================================================
+/* =========================
    AUTH STATE
-================================================== */
+========================= */
 
 onAuthStateChanged(
     auth,
@@ -1099,12 +1065,12 @@ onAuthStateChanged(
         if(user){
 
             document
-            .getElementById("loginPage")
-            .classList.add("hidden");
+                .getElementById("loginPage")
+                .classList.add("hidden");
 
             document
-            .getElementById("app")
-            .classList.remove("hidden");
+                .getElementById("app")
+                .classList.remove("hidden");
 
             loadPosts();
 
@@ -1114,18 +1080,17 @@ onAuthStateChanged(
 );
 
 
-/* ==================================================
+/* =========================
    NAVIGATION
-================================================== */
+========================= */
 
 window.showSection = function(id){
 
     document
-    .querySelectorAll(".section")
-    .forEach(
-        section =>
-        section.classList.remove("active")
-    );
+        .querySelectorAll(".section")
+        .forEach(s =>
+            s.classList.remove("active")
+        );
 
     const section =
         document.getElementById(id);
@@ -1144,69 +1109,65 @@ window.showSection = function(id){
 };
 
 
-/* ==================================================
+/* =========================
    SUBJECT
-================================================== */
+========================= */
 
 window.openSubject = function(subject){
 
     document
-    .getElementById("subjectTitle")
-    .innerText = subject;
+        .getElementById("subjectTitle")
+        .innerText = subject;
 
     showSection("subjectDetail");
 
 };
 
 
-/* ==================================================
+/* =========================
    DOUBT
-================================================== */
+========================= */
 
 window.submitDoubt = function(){
 
     const subject =
-        document
-        .getElementById("doubtSubject")
-        .value
-        .trim();
+        document.getElementById("doubtSubject")
+        .value.trim();
 
     const text =
-        document
-        .getElementById("doubtText")
-        .value
-        .trim();
+        document.getElementById("doubtText")
+        .value.trim();
 
     if(!subject || !text){
 
-        alert(
-            "Please enter the subject and doubt."
-        );
+        alert("Fill in both fields.");
 
         return;
     }
 
+    /*
+       Add your Firestore doubts collection here
+       after setting up your teacher/admin workflow.
+    */
+
     alert(
-        "Doubt submitted. Your teacher/mentor database can be connected here."
+        "Doubt submitted. Teacher/mentor workflow can be connected next."
     );
 
 };
 
 
-/* ==================================================
+/* =========================
    CREATE COMMUNITY POST
-================================================== */
+========================= */
 
 window.createPost = async function(){
 
-    const user =
-        auth.currentUser;
+    const user = auth.currentUser;
 
     if(!user){
 
-        alert(
-            "Please log in first."
-        );
+        alert("Please log in first.");
 
         return;
     }
@@ -1214,19 +1175,17 @@ window.createPost = async function(){
     const name =
         document
         .getElementById("displayName")
-        .value
-        .trim();
+        .value.trim();
 
     const text =
         document
         .getElementById("postText")
-        .value
-        .trim();
+        .value.trim();
 
     if(!name || !text){
 
         alert(
-            "Enter a display name and message."
+            "Enter a display name and post."
         );
 
         return;
@@ -1235,32 +1194,23 @@ window.createPost = async function(){
     try{
 
         await addDoc(
-            collection(
-                db,
-                "communityPosts"
-            ),
+            collection(db,"communityPosts"),
             {
-
                 uid:user.uid,
 
-                displayName:
-                    name.substring(0,30),
+                displayName:name.substring(0,30),
 
-                text:
-                    text.substring(0,500),
+                text:text.substring(0,500),
 
-                createdAt:
-                    serverTimestamp(),
+                createdAt:serverTimestamp(),
 
-                updatedAt:
-                    serverTimestamp()
-
+                updatedAt:serverTimestamp()
             }
         );
 
         document
-        .getElementById("postText")
-        .value="";
+            .getElementById("postText")
+            .value="";
 
     }catch(error){
 
@@ -1275,22 +1225,16 @@ window.createPost = async function(){
 };
 
 
-/* ==================================================
-   LOAD COMMUNITY POSTS
-================================================== */
+/* =========================
+   LOAD POSTS
+========================= */
 
 function loadPosts(){
 
     const q =
         query(
-            collection(
-                db,
-                "communityPosts"
-            ),
-            orderBy(
-                "createdAt",
-                "desc"
-            )
+            collection(db,"communityPosts"),
+            orderBy("createdAt","desc")
         );
 
     onSnapshot(
@@ -1298,4 +1242,61 @@ function loadPosts(){
         snapshot => {
 
             const container =
-                document
+                document.getElementById("posts");
+
+            container.innerHTML="";
+
+            snapshot.forEach(
+                postSnapshot => {
+
+                    const post =
+                        postSnapshot.data();
+
+                    const id =
+                        postSnapshot.id;
+
+                    const currentUser =
+                        auth.currentUser;
+
+                    const card =
+                        document.createElement("div");
+
+                    card.className =
+                        "card post";
+
+                    const user =
+                        document.createElement("div");
+
+                    user.className =
+                        "post-user";
+
+                    user.textContent =
+                        post.displayName ||
+                        "Student";
+
+                    const text =
+                        document.createElement("div");
+
+                    text.className =
+                        "post-text";
+
+                    text.textContent =
+                        post.text;
+
+                    card.appendChild(user);
+
+                    card.appendChild(text);
+
+
+                    /* OWNER CONTROLS */
+
+                    if(
+                        currentUser &&
+                        currentUser.uid === post.uid
+                    ){
+
+                        const actions =
+                            document.createElement("div");
+
+                        actions.className =
+                            "post-actions";
