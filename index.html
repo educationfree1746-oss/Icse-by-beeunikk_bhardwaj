@@ -2,1063 +2,1230 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <meta name="google-site-verification"
-      content="KWy4Jf7SYdAFLb8-fOc6aUM2hg3fsdn1pElxtMMU7Gw">
+content="KWy4Jf7SYdAFLb8-fOc6aUM2hg3fsdn1pElxtMMU7Gw">
 
 <title>AB ICSE</title>
 
 <style>
-
-/* =========================
-   RESET
-========================= */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
 }
 
-body {
-    background: #f4f8ff;
-    color: #123;
+body{
+    background:#f5f5f5;
+    color:#111;
 }
 
-button {
-    border: none;
-    cursor: pointer;
+button{
+    border:0;
+    cursor:pointer;
 }
 
-.hidden {
-    display: none !important;
+.hidden{
+    display:none!important;
+}
+
+/* HEADER */
+
+.header{
+    height:65px;
+    background:#000;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 15px;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.header-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.menu-btn{
+    background:none;
+    color:white;
+    font-size:27px;
+}
+
+.logo{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#fff;
+    color:#000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:10px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.header-title{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.xp{
+    background:white;
+    color:#000;
+    padding:9px 13px;
+    border-radius:20px;
+    font-weight:bold;
 }
 
 
-/* =========================
-   LOGIN
-========================= */
+/* MAIN */
 
-#loginPage {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #000000, #444444);
-    padding: 20px;
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:18px;
+    padding-bottom:100px;
 }
 
-.login-box {
-    width: 100%;
-    max-width: 380px;
-    background: white;
-    padding: 30px 22px;
-    border-radius: 25px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,.2);
+.section{
+    display:none;
 }
 
-.logo {
-    width: 105px;
-    height: 105px;
-    border-radius: 50%;
-    background: #000;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 18px;
-    font-size: 25px;
-    font-weight: bold;
-    line-height: 1.1;
-    border: 6px solid #eeeeee;
+.section.active{
+    display:block;
 }
 
-.login-box h1 {
-    color: #000;
-    margin-bottom: 8px;
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#000,#444);
+    color:white;
+    border-radius:20px;
+    padding:24px;
+    margin-bottom:20px;
 }
 
-.login-box p {
-    color: #666;
-    margin-bottom: 20px;
+.hero h1{
+    margin-bottom:8px;
 }
+
+
+/* CARDS */
+
+.card{
+    background:white;
+    border-radius:16px;
+    padding:18px;
+    margin:14px 0;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+}
+
+.card h3{
+    margin-bottom:8px;
+}
+
+
+/* BATCH OFFERINGS */
+
+.offering-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-top:12px;
+}
+
+.offering{
+    background:white;
+    border-radius:14px;
+    padding:18px 8px;
+    text-align:center;
+    box-shadow:0 3px 12px rgba(0,0,0,.06);
+    cursor:pointer;
+}
+
+.offering-icon{
+    font-size:27px;
+    margin-bottom:8px;
+}
+
+.offering-title{
+    font-weight:bold;
+    font-size:14px;
+}
+
+
+/* EVENTS */
+
+.event{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:14px 0;
+    border-bottom:1px solid #eee;
+}
+
+.event:last-child{
+    border-bottom:0;
+}
+
+.event-icon{
+    font-size:28px;
+}
+
+.event-time{
+    font-size:12px;
+    color:#777;
+}
+
+.event-title{
+    font-weight:bold;
+    margin-top:3px;
+}
+
+
+/* STUDY ZONE */
+
+.study-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+.study-item{
+    background:white;
+    padding:20px 10px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 3px 12px rgba(0,0,0,.06);
+    cursor:pointer;
+}
+
+.study-item span{
+    display:block;
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+
+/* SUBJECTS */
+
+.subject-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:15px;
+}
+
+.subject{
+    background:white;
+    border-radius:15px;
+    padding:20px 10px;
+    text-align:center;
+    box-shadow:0 4px 14px rgba(0,0,0,.07);
+    font-weight:bold;
+}
+
+.subject span{
+    display:block;
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+
+/* MATERIAL */
+
+.material{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 0;
+    border-bottom:1px solid #eee;
+}
+
+.material:last-child{
+    border-bottom:0;
+}
+
+.material button,
+.black-btn{
+    background:#000;
+    color:#fff;
+    padding:9px 13px;
+    border-radius:9px;
+}
+
+
+/* TESTS */
+
+.test{
+    padding:15px;
+    border:1px solid #eee;
+    border-radius:12px;
+    margin:10px 0;
+}
+
+.test button{
+    background:#000;
+    color:#fff;
+    padding:9px 14px;
+    border-radius:8px;
+    margin-top:8px;
+}
+
+
+/* INPUT */
 
 input,
-textarea {
-    width: 100%;
-    padding: 14px;
-    margin: 8px 0;
-    border: 1px solid #ccd8e8;
-    border-radius: 12px;
-    font-size: 16px;
-    outline: none;
+textarea,
+select{
+    width:100%;
+    padding:13px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    margin:7px 0;
+    font-size:15px;
 }
 
-input:focus,
-textarea:focus {
-    border-color: #000;
-}
-
-.primary-btn {
-    width: 100%;
-    padding: 14px;
-    border-radius: 12px;
-    background: #000;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.secondary-btn {
-    background: #eeeeee;
-    color: #000;
-    padding: 10px 15px;
-    border-radius: 10px;
-    margin-top: 10px;
+.primary-btn{
+    background:#000;
+    color:#fff;
+    width:100%;
+    padding:13px;
+    border-radius:10px;
+    font-weight:bold;
+    margin-top:8px;
 }
 
 
-/* =========================
-   APP
-========================= */
+/* COMMUNITY */
 
-#app {
-    min-height: 100vh;
-    padding-bottom: 90px;
+.post{
+    border-left:4px solid #000;
 }
 
-.header {
-    background: #000;
-    color: white;
-    padding: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.post-name{
+    font-weight:bold;
+    margin-bottom:7px;
 }
 
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.post-actions{
+    display:flex;
+    gap:8px;
+    margin-top:12px;
 }
 
-.small-logo {
-    width: 45px;
-    height: 45px;
-    background: white;
-    color: #000;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 11px;
-    text-align: center;
-    line-height: 1.1;
+.post-actions button{
+    padding:7px 11px;
+    border-radius:8px;
+    background:#eee;
 }
 
-.header h2 {
-    font-size: 20px;
-}
-
-.xp-badge {
-    background: white;
-    color: #000;
-    padding: 8px 12px;
-    border-radius: 20px;
-    font-weight: bold;
-}
-
-.container {
-    padding: 18px;
-    max-width: 800px;
-    margin: auto;
+.post-actions .delete{
+    background:#000;
+    color:#fff;
 }
 
 
-/* =========================
-   SECTIONS
-========================= */
+/* RANK */
 
-.section {
-    display: none;
+.rank-card{
+    background:linear-gradient(135deg,#000,#444);
+    color:white;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
 }
 
-.section.active {
-    display: block;
+.rank-name{
+    font-size:29px;
+    font-weight:bold;
+    margin:12px;
 }
 
-
-/* =========================
-   CARDS
-========================= */
-
-.card {
-    background: white;
-    border-radius: 18px;
-    padding: 18px;
-    margin: 12px 0;
-    box-shadow: 0 5px 18px rgba(0,0,0,.08);
+.progress{
+    height:12px;
+    background:#ddd;
+    border-radius:10px;
+    overflow:hidden;
+    margin-top:15px;
 }
 
-.hero {
-    background: linear-gradient(135deg, #000, #444);
-    color: white;
-    border-radius: 20px;
-    padding: 25px;
-    margin-bottom: 18px;
-}
-
-.hero h1 {
-    margin-bottom: 8px;
+.progress-bar{
+    width:0%;
+    height:100%;
+    background:#fff;
 }
 
 
-/* =========================
-   SUBJECTS
-========================= */
+/* BATCHES */
 
-.subject-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-top: 15px;
+.batch{
+    padding:16px;
+    border:1px solid #eee;
+    border-radius:13px;
+    margin:10px 0;
+    cursor:pointer;
 }
 
-.subject {
-    background: white;
-    border-radius: 16px;
-    padding: 18px 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,.06);
-    color: #000;
-    font-weight: bold;
-}
-
-.subject:active {
-    transform: scale(.97);
-}
-
-.subject span {
-    display: block;
-    font-size: 30px;
-    margin-bottom: 8px;
+.batch h3{
+    margin-bottom:5px;
 }
 
 
-/* =========================
-   PDF
-========================= */
+/* HISTORY / BOOKMARK */
 
-.pdf-btn {
-    display: inline-block;
-    background: #000;
-    color: white;
-    padding: 11px 15px;
-    border-radius: 10px;
-    margin-top: 10px;
-    text-decoration: none;
+.history-item,
+.bookmark-item{
+    padding:14px 0;
+    border-bottom:1px solid #eee;
+}
+
+.history-item:last-child,
+.bookmark-item:last-child{
+    border-bottom:0;
 }
 
 
-/* =========================
-   VIDEO
-========================= */
+/* SIDE DRAWER */
 
-.video-box {
-    margin-top: 12px;
-    border-radius: 15px;
-    overflow: hidden;
-    background: #000;
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    z-index:300;
+    display:none;
 }
 
-.video-box iframe {
-    width: 100%;
-    height: 220px;
-    border: 0;
+.overlay.show{
+    display:block;
 }
 
-
-/* =========================
-   DOUBT
-========================= */
-
-.success-message {
-    margin-top: 12px;
-    padding: 12px;
-    background: #eeeeee;
-    border-radius: 10px;
-    display: none;
+.drawer{
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    width:310px;
+    max-width:85%;
+    background:white;
+    z-index:400;
+    transform:translateX(-100%);
+    transition:.25s;
+    overflow-y:auto;
 }
 
-
-/* =========================
-   COMMUNITY
-========================= */
-
-.post {
-    border-left: 4px solid #000;
+.drawer.open{
+    transform:translateX(0);
 }
 
-.post-name {
-    font-weight: bold;
-    color: #000;
-    margin-bottom: 5px;
+.drawer-profile{
+    background:#000;
+    color:#fff;
+    padding:25px 20px;
 }
 
-.post-actions {
-    display: flex;
-    gap: 8px;
-    margin-top: 12px;
+.profile-circle{
+    width:58px;
+    height:58px;
+    background:white;
+    color:#000;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    margin-bottom:12px;
 }
 
-.post-actions button {
-    padding: 7px 12px;
-    border-radius: 8px;
-    background: #eeeeee;
+.drawer-menu{
+    padding:12px;
 }
 
-.post-actions .delete-btn {
-    background: #000;
-    color: white;
+.drawer-item{
+    width:100%;
+    background:white;
+    text-align:left;
+    padding:15px;
+    border-radius:10px;
+    margin:2px 0;
+    font-size:15px;
 }
 
-
-/* =========================
-   RANK
-========================= */
-
-.rank-card {
-    text-align: center;
-    background: linear-gradient(135deg, #000, #444);
-    color: white;
-    border-radius: 20px;
-    padding: 25px;
+.drawer-item:hover{
+    background:#eee;
 }
 
-.rank-card .rank {
-    font-size: 28px;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.progress {
-    width: 100%;
-    height: 12px;
-    background: #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 15px;
-}
-
-.progress-bar {
-    height: 100%;
-    width: 0%;
-    background: #000;
-    transition: width .3s;
+.drawer-item span{
+    display:inline-block;
+    width:32px;
 }
 
 
-/* =========================
-   THEME
-========================= */
+/* THEME */
 
-.theme-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 12px;
+.dark{
+    background:#111;
+    color:#fff;
 }
 
-.theme-buttons button {
-    flex: 1;
-    padding: 12px;
-    border-radius: 10px;
+.dark .card,
+.dark .subject,
+.dark .offering,
+.dark .study-item,
+.dark .test,
+.dark .batch{
+    background:#222;
+    color:#fff;
 }
 
-.black-theme {
-    background: #000;
-    color: white;
+.dark .bottom-nav{
+    background:#222;
 }
 
-.white-theme {
-    background: white;
-    color: #000;
-    border: 1px solid #ccc;
+.dark .bottom-nav button{
+    color:#aaa;
 }
 
-
-/* =========================
-   BOTTOM NAV
-========================= */
-
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    display: flex;
-    justify-content: space-around;
-    padding: 7px 2px;
-    box-shadow: 0 -5px 20px rgba(0,0,0,.12);
-    z-index: 200;
-    overflow-x: auto;
+.dark input,
+.dark textarea,
+.dark select{
+    background:#222;
+    color:#fff;
+    border-color:#555;
 }
 
-.bottom-nav button {
-    background: none;
-    color: #777;
-    font-size: 11px;
-    padding: 7px 5px;
-    min-width: 55px;
-}
-
-.bottom-nav button.active {
-    color: #000;
-    font-weight: bold;
+.dark .material,
+.dark .history-item,
+.dark .bookmark-item,
+.dark .event{
+    border-color:#444;
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* BOTTOM NAV */
 
-@media (max-width: 500px) {
+.bottom-nav{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    height:70px;
+    background:white;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    box-shadow:0 -4px 18px rgba(0,0,0,.12);
+    z-index:200;
+    overflow-x:auto;
+}
 
-    .header h2 {
-        font-size: 17px;
+.bottom-nav button{
+    background:none;
+    color:#777;
+    font-size:11px;
+    min-width:60px;
+    padding:5px;
+}
+
+.bottom-nav button.active{
+    color:#000;
+    font-weight:bold;
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .offering-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .xp-badge {
-        font-size: 13px;
-        padding: 7px 9px;
+    .study-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .subject-grid {
-        grid-template-columns: 1fr 1fr;
+    .header-title{
+        font-size:17px;
     }
 
-    .video-box iframe {
-        height: 190px;
+    .xp{
+        font-size:12px;
+        padding:7px 9px;
     }
+
 }
 
 </style>
 </head>
 
-
 <body>
 
 
 <!-- =========================
-     LOGIN PAGE
+     SIDE MENU
 ========================= -->
 
-<div id="loginPage">
+<div id="overlay"
+     class="overlay"
+     onclick="closeDrawer()">
+</div>
 
-    <div class="login-box">
+<div id="drawer"
+     class="drawer">
 
-        <div class="logo">
-            AB<br>ICSE
+    <div class="drawer-profile">
+
+        <div class="profile-circle">
+            AB
         </div>
 
-        <h1>AB ICSE</h1>
+        <h2>AB ICSE Student</h2>
 
-        <p>
-            Learn • Practice • Improve
+        <p style="margin-top:5px;">
+            View Profile
         </p>
 
-
-        <!-- PHONE -->
-
-        <div id="phoneSection">
-
-            <input
-                id="phone"
-                type="tel"
-                inputmode="numeric"
-                placeholder="Enter mobile number"
-                maxlength="10">
-
-            <button
-                class="primary-btn"
-                onclick="sendOTP()">
-                Send OTP
-            </button>
-
-            <p style="font-size:12px;margin-top:12px;">
-                Demo mode: OTP will appear on this screen.
-            </p>
-
-        </div>
+    </div>
 
 
-        <!-- OTP -->
+    <div class="drawer-menu">
 
-        <div id="otpSection" class="hidden">
+        <button class="drawer-item"
+                onclick="closeDrawer();showSection('home')">
+            <span>🏠</span> Home
+        </button>
 
-            <input
-                id="otp"
-                type="tel"
-                inputmode="numeric"
-                placeholder="Enter 6-digit OTP"
-                maxlength="6">
+        <button class="drawer-item"
+                onclick="toggleDarkMode()">
+            <span>🌙</span> Dark Mode
+        </button>
 
-            <button
-                class="primary-btn"
-                onclick="verifyOTP()">
-                Verify OTP
-            </button>
+        <button class="drawer-item"
+                onclick="closeDrawer();showSection('quick')">
+            <span>⚡</span> Quick Learning
+        </button>
 
-            <button
-                class="secondary-btn"
-                onclick="backToPhone()">
-                Change number
-            </button>
+        <button class="drawer-item"
+                onclick="closeDrawer();showSection('tests')">
+            <span>📝</span> Test Series
+        </button>
 
-            <p
-                id="otpMessage"
-                style="margin-top:12px;font-weight:bold;">
-            </p>
+        <button class="drawer-item"
+                onclick="closeDrawer();showSection('library')">
+            <span>📚</span> Library
+        </button>
 
-        </div>
+        <button class="drawer-item"
+                onclick="closeDrawer();showSection('downloads')">
+            <span>⬇️</span> Downloads
+        </button>
+
+        <button class="drawer-item"
+                onclick="closeDrawer();showSection('terms')">
+            <span>📄</span> Terms & Conditions
+        </button>
 
     </div>
 
 </div>
 
 
-
 <!-- =========================
-     MAIN APP
+     APP
 ========================= -->
 
-<div id="app" class="hidden">
+<div id="app">
 
 
-    <!-- HEADER -->
+<!-- HEADER -->
 
-    <div class="header">
+<header class="header">
 
-        <div class="header-left">
+    <div class="header-left">
 
-            <div class="small-logo">
-                AB<br>ICSE
+        <button class="menu-btn"
+                onclick="openDrawer()">
+            ☰
+        </button>
+
+        <div class="logo">
+            AB<br>ICSE
+        </div>
+
+        <div class="header-title">
+            AB ICSE
+        </div>
+
+    </div>
+
+
+    <div class="xp"
+         onclick="showSection('rank')">
+        ⚡ <span id="headerXP">0</span> XP
+    </div>
+
+</header>
+
+
+
+<div class="container">
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section id="home"
+         class="section active">
+
+    <div class="hero">
+
+        <h1>Welcome to AB ICSE 👋</h1>
+
+        <p>
+            Learn • Practice • Improve
+        </p>
+
+    </div>
+
+
+    <!-- BATCH OFFERINGS -->
+
+    <h2>Batch Offerings</h2>
+
+    <div class="offering-grid">
+
+        <div class="offering"
+             onclick="showSection('subjects')">
+
+            <div class="offering-icon">📚</div>
+            <div class="offering-title">
+                All Classes
             </div>
-
-            <h2>AB ICSE</h2>
 
         </div>
 
-        <div
-            class="xp-badge"
-            onclick="showSection('rank')">
 
-            ⚡ <span id="headerXP">0</span> XP
+        <div class="offering"
+             onclick="showSection('tests')">
+
+            <div class="offering-icon">📝</div>
+            <div class="offering-title">
+                All Tests
+            </div>
+
+        </div>
+
+
+        <div class="offering"
+             onclick="showSection('doubts')">
+
+            <div class="offering-icon">❓</div>
+            <div class="offering-title">
+                My Doubts
+            </div>
+
+        </div>
+
+
+        <div class="offering"
+             onclick="showSection('community')">
+
+            <div class="offering-icon">👥</div>
+            <div class="offering-title">
+                Community
+            </div>
 
         </div>
 
     </div>
 
 
+    <!-- UPCOMING EVENTS -->
 
-    <div class="container">
+    <div class="card">
 
+        <h2>Upcoming Events</h2>
 
-        <!-- =========================
-             HOME
-        ========================= -->
+        <div class="event">
 
-        <div
-            id="home"
-            class="section active">
-
-            <div class="hero">
-
-                <h1>
-                    Welcome to AB ICSE 👋
-                </h1>
-
-                <p>
-                    Study smarter, practice daily
-                    and earn XP.
-                </p>
-
+            <div class="event-icon">
+                ⚡
             </div>
 
+            <div>
 
-            <div class="rank-card">
-
-                <div>Your Rank</div>
-
-                <div
-                    class="rank"
-                    id="rankName">
-                    🌱 Beginner
+                <div class="event-time">
+                    4:00 PM
                 </div>
 
-                <div>
-                    <span id="homeXP">0</span> XP
+                <div class="event-title">
+                    Lecture • Physics
                 </div>
 
-            </div>
-
-
-            <div class="card">
-
-                <h3>
-                    📚 Continue Learning
-                </h3>
-
-                <p style="margin-top:8px;color:#666;">
-                    Watch lectures, read notes and
-                    complete DPPs to earn XP.
-                </p>
-
-            </div>
-
-
-            <!-- THEME -->
-
-            <div class="card">
-
-                <h3>🎨 Theme</h3>
-
-                <p style="margin-top:8px;color:#666;">
-                    Choose your app theme.
-                </p>
-
-                <div class="theme-buttons">
-
-                    <button
-                        class="black-theme"
-                        onclick="setTheme('black')">
-                        Black
-                    </button>
-
-                    <button
-                        class="white-theme"
-                        onclick="setTheme('white')">
-                        White
-                    </button>
-
-                </div>
+                <small>
+                    Physics Chapter Lecture
+                </small>
 
             </div>
 
         </div>
 
 
+        <div class="event">
 
-        <!-- =========================
-             SUBJECTS
-        ========================= -->
+            <div class="event-icon">
+                🧪
+            </div>
 
-        <div
-            id="subjects"
-            class="section">
+            <div>
 
-            <h2>📚 Subjects</h2>
-
-            <div class="subject-grid">
-
-                <div
-                    class="subject"
-                    onclick="openSubject('English')">
-                    <span>📖</span>
-                    English
+                <div class="event-time">
+                    6:15 PM
                 </div>
 
-                <div
-                    class="subject"
-                    onclick="openSubject('Hindi')">
-                    <span>📝</span>
-                    Hindi
+                <div class="event-title">
+                    Lecture • Chemistry
                 </div>
 
-                <div
-                    class="subject"
-                    onclick="openSubject('Mathematics')">
-                    <span>➗</span>
-                    Mathematics
-                </div>
-
-                <div
-                    class="subject"
-                    onclick="openSubject('Physics')">
-                    <span>⚡</span>
-                    Physics
-                </div>
-
-                <div
-                    class="subject"
-                    onclick="openSubject('Chemistry')">
-                    <span>🧪</span>
-                    Chemistry
-                </div>
-
-                <div
-                    class="subject"
-                    onclick="openSubject('Biology')">
-                    <span>🧬</span>
-                    Biology
-                </div>
-
-                <div
-                    class="subject"
-                    onclick="openSubject('History & Civics')">
-                    <span>🏛️</span>
-                    History & Civics
-                </div>
-
-                <div
-                    class="subject"
-                    onclick="openSubject('Geography')">
-                    <span>🌍</span>
-                    Geography
-                </div>
-
-                <div
-                    class="subject"
-                    onclick="openSubject('Computer Applications')">
-                    <span>💻</span>
-                    Computer
-                </div>
-
-                <div
-                    class="subject"
-                    onclick="openSubject('Second Language')">
-                    <span>🗣️</span>
-                    Second Language
-                </div>
+                <small>
+                    Chemistry Chapter Lecture
+                </small>
 
             </div>
 
         </div>
 
+    </div>
 
 
-        <!-- =========================
-             NOTES
-        ========================= -->
+    <!-- MY STUDY ZONE -->
 
-        <div
-            id="notes"
-            class="section">
+    <div class="card">
 
-            <h2>📄 Notes & PDFs</h2>
+        <h2>My Study Zone</h2>
 
-            <div class="card">
+        <div class="study-grid"
+             style="margin-top:12px;">
 
-                <h3>Mathematics</h3>
-
-                <p style="margin-top:8px;">
-                    Chapter 1 Notes
-                </p>
-
-                <a
-                    class="pdf-btn"
-                    href="pdf/mathematics-chapter-1.pdf"
-                    target="_blank">
-                    📄 Open PDF
-                </a>
-
+            <div class="study-item"
+                 onclick="showSection('batches')">
+                <span>📚</span>
+                My Batches
             </div>
 
-
-            <div class="card">
-
-                <h3>Physics</h3>
-
-                <p style="margin-top:8px;">
-                    Chapter 1 Notes
-                </p>
-
-                <a
-                    class="pdf-btn"
-                    href="pdf/physics-chapter-1.pdf"
-                    target="_blank">
-                    📄 Open PDF
-                </a>
-
+            <div class="study-item"
+                 onclick="showSection('dashboard')">
+                <span>📊</span>
+                Dashboard
             </div>
 
-        </div>
+            <div class="study-item"
+                 onclick="showSection('library')">
+                <span>📖</span>
+                Library
+            </div>
 
+            <div class="study-item"
+                 onclick="showSection('history')">
+                <span>↩️</span>
+                My History
+            </div>
 
+            <div class="study-item"
+                 onclick="showSection('bookmarks')">
+                <span>🔖</span>
+                Bookmarks
+            </div>
 
-        <!-- =========================
-             VIDEOS
-        ========================= -->
-
-        <div
-            id="videos"
-            class="section">
-
-            <h2>🎥 Lectures</h2>
-
-            <div class="card">
-
-                <h3>
-                    Mathematics Lecture
-                </h3>
-
-                <div class="video-box">
-
-                    <iframe
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                        title="Mathematics Lecture"
-                        allowfullscreen>
-                    </iframe>
-
-                </div>
-
-                <p
-                    style="margin-top:10px;color:#666;">
-                    Demo lecture.
-                </p>
-
-                <button
-                    class="primary-btn"
-                    onclick="addLectureXP(10)">
-                    ⚡ Complete 10-minute lecture
-                    (+20 XP)
-                </button>
-
+            <div class="study-item"
+                 onclick="showSection('rank')">
+                <span>🏆</span>
+                XP & Rank
             </div>
 
         </div>
 
+    </div>
+
+</section>
 
 
-        <!-- =========================
-             DOUBTS
-        ========================= -->
 
-        <div
-            id="doubts"
-            class="section">
+<!-- =========================
+     ALL CLASSES / SUBJECTS
+========================= -->
 
-            <h2>❓ Ask a Doubt</h2>
+<section id="subjects"
+         class="section">
 
-            <div class="card">
+    <h2>📚 All Classes</h2>
 
-                <input
-                    id="doubtSubject"
-                    placeholder="Subject">
+    <p style="margin-top:6px;color:#777;">
+        Select a subject to view videos, notes and practice.
+    </p>
 
-                <textarea
-                    id="doubtText"
-                    rows="5"
-                    placeholder="Write your doubt here...">
-                </textarea>
 
-                <button
-                    class="primary-btn"
-                    onclick="submitDoubt()">
-                    Submit Doubt
-                </button>
+    <div class="subject-grid">
 
-                <div
-                    id="doubtSuccess"
-                    class="success-message">
-                    ✅ Your doubt has been submitted.
-                </div>
-
-            </div>
-
+        <div class="subject"
+             onclick="openSubject('English')">
+            <span>📖</span>
+            English
         </div>
 
-
-
-        <!-- =========================
-             COMMUNITY
-        ========================= -->
-
-        <div
-            id="community"
-            class="section">
-
-            <h2>👥 Student Community</h2>
-
-            <div class="card">
-
-                <textarea
-                    id="communityText"
-                    rows="3"
-                    placeholder="Share something with students...">
-                </textarea>
-
-                <button
-                    class="primary-btn"
-                    onclick="addPost()">
-                    Post
-                </button>
-
-            </div>
-
-
-            <div id="posts">
-
-                <div class="card post">
-
-                    <div class="post-name">
-                        AB ICSE Student
-                    </div>
-
-                    <p>
-                        Welcome to the AB ICSE
-                        community! 🎓
-                    </p>
-
-                </div>
-
-            </div>
-
+        <div class="subject"
+             onclick="openSubject('Hindi')">
+            <span>📝</span>
+            Hindi
         </div>
 
-
-
-        <!-- =========================
-             RANK
-        ========================= -->
-
-        <div
-            id="rank"
-            class="section">
-
-            <h2>🏆 My Progress</h2>
-
-            <div
-                class="rank-card"
-                style="margin-top:15px;">
-
-                <div>Current Rank</div>
-
-                <div
-                    class="rank"
-                    id="bigRank">
-                    🌱 Beginner
-                </div>
-
-                <h2>
-                    <span id="bigXP">0</span>
-                    XP
-                </h2>
-
-                <div class="progress">
-
-                    <div
-                        id="progressBar"
-                        class="progress-bar">
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>Rank System</h3>
-
-                <p style="margin-top:10px;">
-                    🌱 Level 1 — Beginner:
-                    0–499 XP
-                </p>
-
-                <p>
-                    📘 Level 2 — Learner:
-                    500–1,499 XP
-                </p>
-
-                <p>
-                    🔥 Level 3 — Achiever:
-                    1,500–2,999 XP
-                </p>
-
-                <p>
-                    ⭐ Level 4 — Scholar:
-                    3,000–5,999 XP
-                </p>
-
-                <p>
-                    🏆 Level 5 — Master:
-                    6,000–9,999 XP
-                </p>
-
-                <p>
-                    👑 Level 6 — ICSE Champion:
-                    10,000+ XP
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>⚡ XP Rules</h3>
-
-                <p style="margin-top:10px;">
-                    🎥 Lecture:
-                    2 XP per minute
-                </p>
-
-                <p>
-                    📝 DPP:
-                    4 XP per correct question
-                </p>
-
-            </div>
-
+        <div class="subject"
+             onclick="openSubject('Mathematics')">
+            <span>➗</span>
+            Mathematics
         </div>
 
+        <div class="subject"
+             onclick="openSubject('Physics')">
+            <span>⚡</span>
+            Physics
+        </div>
+
+        <div class="subject"
+             onclick="openSubject('Chemistry')">
+            <span>🧪</span>
+            Chemistry
+        </div>
+
+        <div class="subject"
+             onclick="openSubject('Biology')">
+            <span>🧬</span>
+            Biology
+        </div>
+
+        <div class="subject"
+             onclick="openSubject('History & Civics')">
+            <span>🏛️</span>
+            History & Civics
+        </div>
+
+        <div class="subject"
+             onclick="openSubject('Geography')">
+            <span>🌍</span>
+            Geography
+        </div>
+
+        <div class="subject"
+             onclick="openSubject('Computer Applications')">
+            <span>💻</span>
+            Computer
+        </div>
+
+        <div class="subject"
+             onclick="openSubject('Second Language')">
+            <span>🗣️</span>
+            Second Language
+        </div>
+
+    </div>
+
+</section>
 
 
-        <!-- =========================
-             SUBJECT DETAIL
-        ========================= -->
 
-        <div
-            id="subjectDetail"
-            class="section">
+<!-- =========================
+     SUBJECT DETAIL
+========================= -->
 
-            <button
-                class="secondary-btn"
-                onclick="showSection('subjects')">
-                ← Back
+<section id="subjectDetail"
+         class="section">
+
+    <button class="secondary-btn"
+            onclick="showSection('subjects')">
+        ← Back
+    </button>
+
+    <div class="card">
+
+        <h2 id="subjectTitle">
+            Subject
+        </h2>
+
+        <p id="subjectDescription"
+           style="margin:8px 0;color:#777;">
+        </p>
+
+
+        <div class="material">
+
+            <div>
+                🎥
+                <b>Lectures</b>
+                <br>
+                <small>Video classes</small>
+            </div>
+
+            <button onclick="showSection('videos')">
+                Open
             </button>
 
-            <div class="card">
+        </div>
 
-                <h2 id="subjectTitle">
-                    Subject
-                </h2>
 
-                <p
-                    id="subjectDescription"
-                    style="margin-top:10px;color:#666;">
-                </p>
+        <div class="material">
 
-                <button
-                    class="primary-btn"
-                    onclick="showSection('notes')">
-                    📄 View Notes
-                </button>
+            <div>
+                📄
+                <b>Notes</b>
+                <br>
+                <small>Chapter notes</small>
+            </div>
 
-                <button
-                    class="primary-btn"
-                    onclick="showSection('videos')">
-                    🎥 View Lectures
-                </button>
+            <button onclick="showSection('notes')">
+                Open
+            </button>
 
-            </div
+        </div>
+
+
+        <div class="material">
+
+            <div>
+                📝
+                <b>DPP / Practice</b>
+                <br>
+                <small>Practice questions</small>
+            </div>
+
+            <button onclick="showSection('tests')">
+                Open
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     NOTES
+========================= -->
+
+<section id="notes"
+         class="section">
+
+    <h2>📄 Notes</h2>
+
+    <div class="card">
+
+        <div class="material">
+
+            <div>
+                📐 Mathematics<br>
+                <small>Chapter 1 Notes</small>
+            </div>
+
+            <button>
+                Open
+            </button>
+
+        </div>
+
+
+        <div class="material">
+
+            <div>
+                ⚡ Physics<br>
+                <small>Chapter 1 Notes</small>
+            </div>
+
+            <button>
+                Open
+            </button>
+
+        </div>
+
+
+        <div class="material">
+
+            <div>
+                🧪 Chemistry<br>
+                <small>Chapter 1 Notes</small>
+            </div>
+
+            <button>
+                Open
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     VIDEOS
+========================= -->
+
+<section id="videos"
+         class="section">
+
+    <h2>🎥 Videos</h2>
+
+    <div class="card">
+
+        <h3>Mathematics Lecture</h3>
+
+        <div style="margin-top:12px;
+                    background:#111;
+                    color:white;
+                    padding:55px 10px;
+                    text-align:center;
+                    border-radius:12px;">
+
+            ▶️ Mathematics Lecture
+
+        </div>
+
+        <button class="primary-btn"
+                onclick="watchVideo('Mathematics Lecture')">
+
+            ▶ Watch Lecture
+        </button>
+
+        <button class="primary-btn"
+                onclick="addBookmark('Mathematics Lecture')">
+
+            🔖 Bookmark
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TESTS
+========================= -->
+
+<section id="tests"
+         class="section">
+
+    <h2>📝 All Tests</h2>
+
+    <div class="card">
+
+        <div class="test">
+
+            <h3>Mathematics Test 1</h3>
+
+            <p>
+                20 Questions • 40 Marks
+            </p>
+
+            <button onclick="startTest('Mathematics Test 1')">
+                Start Test
+            </button>
+
+        </div>
+
+
+        <div class="test">
+
+            <h3>Physics Test 1</h3>
+
+            <p>
+                20 Questions • 40 Marks
+            </p>
+
+            <button onclick="startTest('Physics Test 1')">
+                Start Test
+            </button>
+
+        </div>
+
+
+        <div class="test">
+
+            <h3>Chemistry Test 1</h3>
+
+            <p>
+                20 Questions • 40 Marks
+            </p>
+
+            <button onclick="startTest('Chemistry Test 1')">
+                Start Test
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     DOUBTS
+========================= -->
+
+<section id="doubts"
+         class="section">
+
+    <h2>❓ My Doubts</h2>
+
+    <div class="card">
+
+        <input id="doubtSubject"
+               placeholder="Subject">
+
+        <textarea id="doubtText"
+                  rows="5"
+                  placeholder="Write your doubt..."></textarea>
+
+        <button class="primary-btn"
+                onclick="submitDoubt()">
+
+            Submit Doubt
+
+        </button>
+
+    </div>
+
+
+    <div id="doubtList"></div>
+
+</section>
+
+
+
+<!-- =========================
+     COMMUNITY
+========================= -->
+
+<section id="community"
+         class="section">
+
+    <h2>👥 Community</h2>
+
+    <div class="card">
+
+        <textarea id="communityText"
+                  rows="3"
+                  placeholder="Talk with other students..."></textarea
