@@ -3,334 +3,235 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AB ICSE</title>
-
+<meta name="description" content="NEET student dashboard UI recreated from reference screenshots">
+<title>PW Student Dashboard</title>
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    font-family:Arial,Helvetica,sans-serif;
-}
+  :root{
+    --purple:#5b5bd6;
+    --purple-dark:#4747b9;
+    --text:#25253a;
+    --muted:#77788f;
+    --line:#ececf4;
+    --soft:#f7f7fb;
+    --card:#ffffff;
+    --shadow:0 8px 28px rgba(44,44,90,.08);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--text);background:#fafafd}
+  body{overflow-x:hidden}
+  button{font:inherit}
+  .app{min-height:100vh}
+  .topbar{
+    height:72px;background:#fff;border-bottom:1px solid var(--line);
+    display:flex;align-items:center;justify-content:space-between;padding:0 34px;
+    position:sticky;top:0;z-index:20
+  }
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:22px;color:#3e3e8e}
+  .brand-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#6969ed,#4545b9);display:grid;place-items:center;color:#fff;font-weight:900}
+  .top-actions{display:flex;align-items:center;gap:14px}
+  .icon-btn{
+    border:0;background:#f3f3fa;width:42px;height:42px;border-radius:50%;cursor:pointer;color:#4f4f6e;
+    display:grid;place-items:center;font-size:19px
+  }
+  .avatar{
+    width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ef8b7f,#d95757);
+    display:grid;place-items:center;color:#fff;font-weight:800;border:3px solid #fff;box-shadow:0 2px 8px #0001
+  }
+  .layout{display:flex;max-width:1280px;margin:0 auto;padding:30px 30px 60px;gap:28px}
+  main{flex:1;min-width:0}
+  .welcome{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+  .welcome h1{font-size:28px;margin:0 0 7px}
+  .welcome p{margin:0;color:var(--muted)}
+  .quick-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:34px
+  }
+  .quick-card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;
+    min-height:105px;box-shadow:0 4px 18px rgba(30,30,80,.035);cursor:pointer;transition:.18s
+  }
+  .quick-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .quick-icon{width:40px;height:40px;border-radius:11px;background:#eeeeff;color:var(--purple);display:grid;place-items:center;font-size:19px;margin-bottom:11px}
+  .quick-card b{font-size:14px}.quick-card small{display:block;color:#9292a7;margin-top:4px}
+  .section-title{display:flex;justify-content:space-between;align-items:center;margin:0 0 14px}
+  .section-title h2{font-size:19px;margin:0}
+  .link{color:var(--purple);font-size:13px;cursor:pointer}
+  .events{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:34px}
+  .event{
+    background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px;display:flex;align-items:center;gap:15px
+  }
+  .teacher{width:58px;height:58px;border-radius:12px;background:linear-gradient(#ececf7,#d7d7ec);display:grid;place-items:center;font-size:26px}
+  .event-time{font-size:12px;color:#8889a0;margin-bottom:5px}
+  .event-title{font-weight:750;font-size:15px}
+  .event-sub{font-size:12px;color:#9a9aad;margin-top:5px}
+  .study-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .study-card{
+    background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;min-height:125px;cursor:pointer
+  }
+  .study-card .big-icon{font-size:25px;margin-bottom:14px}
+  .study-card b{font-size:14px}.study-card p{margin:5px 0 0;color:#9999ab;font-size:12px;line-height:1.45}
+  .side-preview{
+    width:270px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;height:max-content;box-shadow:var(--shadow)
+  }
+  .profile-mini{display:flex;align-items:center;gap:12px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+  .profile-mini .avatar{width:46px;height:46px}
+  .profile-mini b{font-size:14px}.profile-mini span{display:block;font-size:12px;color:#9292a7;margin-top:3px}
+  .goal{margin-top:18px;background:#f5f5ff;border-radius:13px;padding:15px}
+  .goal b{font-size:13px}.goal p{font-size:12px;color:#77788e;line-height:1.5;margin:7px 0 0}
+  .menu-list{margin-top:18px;display:grid;gap:5px}
+  .menu-item{border:0;background:transparent;text-align:left;padding:11px 9px;border-radius:10px;color:#62637a;cursor:pointer;display:flex;gap:11px;align-items:center}
+  .menu-item:hover{background:#f5f5fb;color:var(--purple)}
+  .menu-item.active{background:#eeeeff;color:var(--purple);font-weight:700}
+  .drawer-backdrop{display:none;position:fixed;inset:0;background:rgba(15,15,30,.38);z-index:50}
+  .drawer{
+    position:fixed;z-index:60;top:0;right:0;height:100vh;width:min(390px,92vw);background:#fff;
+    box-shadow:-15px 0 40px rgba(0,0,0,.16);transform:translateX(105%);transition:transform .25s ease;overflow:auto
+  }
+  .drawer.open{transform:translateX(0)}
+  .drawer-backdrop.open{display:block}
+  .drawer-head{padding:26px 22px 20px;display:flex;align-items:center;justify-content:space-between}
+  .profile{display:flex;align-items:center;gap:14px}
+  .profile .avatar{width:62px;height:62px;font-size:19px}
+  .profile h3{margin:0;font-size:18px}.profile p{margin:5px 0 0;color:#77788d;font-size:13px}
+  .close{border:0;background:#f1f1f7;width:38px;height:38px;border-radius:50%;cursor:pointer;color:#55566c;font-size:20px}
+  .goal-box{margin:0 22px 15px;background:#f7f7fd;border-radius:13px;padding:13px;color:#686980;font-size:12px}
+  .goal-box strong{display:block;color:#363750;font-size:13px;margin-bottom:4px}
+  .drawer-nav{padding:4px 14px 20px}
+  .drawer-item{
+    width:100%;border:0;background:transparent;display:flex;align-items:center;gap:14px;padding:13px 10px;
+    border-radius:10px;text-align:left;color:#52536a;cursor:pointer
+  }
+  .drawer-item:hover{background:#f5f5fa}
+  .drawer-item .mi{width:26px;text-align:center;font-size:17px;color:#77788e}
+  .drawer-item strong{font-size:14px;font-weight:550}
+  .drawer-item small{display:block;color:#aaaabb;font-size:10px;margin-top:2px}
+  .drawer-item.goal-item{margin-bottom:2px}
+  .drawer-item.danger{color:#b55d66}
+  .version{text-align:center;color:#b1b1bd;font-size:10px;padding:4px 0 25px}
+  .toast{
+    position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);background:#29293d;color:#fff;
+    padding:11px 16px;border-radius:10px;font-size:13px;opacity:0;pointer-events:none;transition:.2s;z-index:80
+  }
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+  @media(max-width:1000px){
+    .side-preview{display:none}.quick-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:680px){
+    .topbar{height:62px;padding:0 15px}.brand{font-size:18px}
+    .layout{padding:22px 15px 45px}.welcome h1{font-size:23px}
+    .quick-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+    .events{grid-template-columns:1fr}.study-grid{grid-template-columns:1fr 1fr;gap:10px}
+    .quick-card{padding:14px;min-height:96px}.study-card{padding:16px;min-height:110px}
+  }
+  @media(max-width:430px){.study-grid{grid-template-columns:1fr}.quick-card{min-height:90px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark">PW</div><span>Student App</span></div>
+    <div class="top-actions">
+      <button class="icon-btn" aria-label="Notifications" onclick="toast('No new notifications')">🔔</button>
+      <button class="avatar" aria-label="Open profile menu" onclick="openDrawer()">Y</button>
+    </div>
+  </header>
 
-body{
-    background:#f5f5f5;
-    color:#111;
-    transition:.2s;
-}
+  <div class="layout">
+    <main>
+      <section class="welcome">
+        <div><h1>Batch Offerings</h1><p>Continue your NEET preparation from where you left off.</p></div>
+        <button class="icon-btn" onclick="toast('Search opened')" aria-label="Search">⌕</button>
+      </section>
 
-button{
-    border:0;
-    cursor:pointer;
-}
+      <div class="quick-grid">
+        <div class="quick-card" onclick="toast('All Classes opened')"><div class="quick-icon">▣</div><b>All Classes</b><small>Watch your lectures</small></div>
+        <div class="quick-card" onclick="toast('All Tests opened')"><div class="quick-icon">▤</div><b>All Tests</b><small>Practice and evaluate</small></div>
+        <div class="quick-card" onclick="toast('My Doubts opened')"><div class="quick-icon">?</div><b>My Doubts</b><small>Ask your questions</small></div>
+        <div class="quick-card" onclick="toast('Community opened')"><div class="quick-icon">♣</div><b>Community</b><small>Learn together</small></div>
+        <div class="quick-card" onclick="toast('Preparation Meter opened')"><div class="quick-icon">◉</div><b>Preparation Meter</b><small>Track your progress</small></div>
+        <div class="quick-card" onclick="toast('Saarthi opened')"><div class="quick-icon">♙</div><b>Saarthi</b><small>Get guidance</small></div>
+        <div class="quick-card" onclick="toast('Khazana opened')"><div class="quick-icon">▣</div><b>Khazana</b><small>Explore resources</small></div>
+        <div class="quick-card" onclick="toast('Infinite Practice opened')"><div class="quick-icon">∞</div><b>Infinite Practice</b><small>Practice endlessly</small></div>
+      </div>
 
-.hidden{
-    display:none!important;
-}
+      <div class="section-title"><h2>Upcoming Events (2)</h2><span class="link" onclick="toast('Schedule opened')">View Schedule →</span></div>
+      <section class="events">
+        <div class="event"><div class="teacher">👨‍🏫</div><div><div class="event-time">4:00 PM</div><div class="event-title">Lecture · Physics</div><div class="event-sub">Regular Class • Physics</div></div></div>
+        <div class="event"><div class="teacher">👨‍🏫</div><div><div class="event-time">6:15 PM</div><div class="event-title">Lecture · Physical Chemistry</div><div class="event-sub">Regular Class • Chemistry</div></div></div>
+      </section>
 
-/* ================= HEADER ================= */
+      <div class="section-title"><h2>My Study Zone</h2></div>
+      <section class="study-grid">
+        <div class="study-card" onclick="toast('My Batches opened')"><div class="big-icon">▣</div><b>My Batches</b><p>View and continue your enrolled batches.</p></div>
+        <div class="study-card" onclick="toast('Dashboard opened')"><div class="big-icon">⊞</div><b>Dashboard</b><p>Track your overall preparation.</p></div>
+        <div class="study-card" onclick="toast('Library opened')"><div class="big-icon">▥</div><b>Library</b><p>Find notes and study material.</p></div>
+        <div class="study-card" onclick="toast('My History opened')"><div class="big-icon">◔</div><b>My History</b><p>See your recent learning activity.</p></div>
+        <div class="study-card" onclick="toast('Bookmarks opened')"><div class="big-icon">▯</div><b>Bookmarks</b><p>Quickly revisit saved content.</p></div>
+        <div class="study-card" onclick="toast('Battlegrounds opened')"><div class="big-icon">♜</div><b>Battlegrounds</b><p>Challenge yourself with practice.</p></div>
+      </section>
+    </main>
 
-.header{
-    height:65px;
-    background:#000;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:8px 14px;
-    position:sticky;
-    top:0;
-    z-index:100;
-}
+    <aside class="side-preview">
+      <div class="profile-mini"><div class="avatar">Y</div><div><b>Your Name</b><span>NEET • Dropper</span></div></div>
+      <div class="goal"><b>Dropper - NEET</b><p>Your current learning goal. Open the profile menu for more options.</p></div>
+      <div class="menu-list">
+        <button class="menu-item active" onclick="openDrawer()"><span>☰</span>Profile & Menu</button>
+        <button class="menu-item" onclick="toast('Quick Learning opened')"><span>▣</span>Quick Learning</button>
+        <button class="menu-item" onclick="toast('Test Series opened')"><span>▤</span>Test Series</button>
+        <button class="menu-item" onclick="toast('Downloads opened')"><span>⇩</span>Downloads</button>
+      </div>
+    </aside>
+  </div>
+</div>
 
-.headerLeft{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
+<div id="backdrop" class="drawer-backdrop" onclick="closeDrawer()"></div>
+<aside id="drawer" class="drawer" aria-label="Profile menu">
+  <div class="drawer-head">
+    <div class="profile"><div class="avatar">Y</div><div><h3>Your Name</h3><p>View profile</p></div></div>
+    <button class="close" onclick="closeDrawer()" aria-label="Close menu">×</button>
+  </div>
+  <div class="goal-box"><strong>Dropper - NEET</strong>Change your goal</div>
+  <nav class="drawer-nav">
+    <button class="drawer-item" onclick="toast('Dark Mode is a demo option')"><span class="mi">◐</span><span><strong>Dark Mode</strong><small>BETA</small></span><span style="margin-left:auto">○</span></button>
+    <button class="drawer-item" onclick="toast('Quick Learning opened')"><span class="mi">▣</span><strong>Quick Learning</strong></button>
+    <button class="drawer-item" onclick="toast('Test Series opened')"><span class="mi">▤</span><strong>Test Series</strong></button>
+    <button class="drawer-item" onclick="toast('About Us opened')"><span class="mi">ⓘ</span><strong>About us</strong></button>
+    <button class="drawer-item" onclick="toast('Library opened')"><span class="mi">▥</span><strong>Library</strong></button>
+    <button class="drawer-item" onclick="toast('Downloads opened')"><span class="mi">⇩</span><strong>Downloads</strong></button>
+    <button class="drawer-item" onclick="toast('Scholarship opened')"><span class="mi">♕</span><strong>Scholarship</strong></button>
+    <button class="drawer-item" onclick="toast('Contact Us opened')"><span class="mi">♧</span><strong>Contact us</strong></button>
+    <button class="drawer-item" onclick="toast('Terms & Conditions opened')"><span class="mi">▱</span><strong>Terms & Conditions</strong></button>
+    <button class="drawer-item" onclick="toast('PW Centres opened')"><span class="mi">⌂</span><strong>PW Centres</strong></button>
+    <button class="drawer-item" onclick="toast('App Guide Tour opened')"><span class="mi">▧</span><strong>App Guides Tour</strong></button>
+    <button class="drawer-item danger" onclick="toast('Logout is disabled in this demo')"><span class="mi">↪</span><strong>Logout</strong></button>
+  </nav>
+  <div class="version">App Version: 12.7.1</div>
+</aside>
 
-.menuButton{
-    background:none;
-    color:#fff;
-    font-size:28px;
-    padding:5px;
-}
+<div id="toast" class="toast"></div>
+<script>
+  const drawer = document.getElementById('drawer');
+  const backdrop = document.getElementById('backdrop');
+  const toastBox = document.getElementById('toast');
 
-.logo{
-    width:43px;
-    height:43px;
-    border-radius:50%;
-    background:#fff;
-    color:#000;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    font-weight:bold;
-    font-size:10px;
-    line-height:11px;
-}
-
-.headerTitle{
-    font-size:20px;
-    font-weight:bold;
-}
-
-.xpButton{
-    background:#fff;
-    color:#000;
-    padding:9px 12px;
-    border-radius:20px;
-    font-weight:bold;
-}
-
-/* ================= MAIN ================= */
-
-.container{
-    max-width:950px;
-    margin:auto;
-    padding:18px;
-    padding-bottom:90px;
-}
-
-.section{
-    display:none;
-}
-
-.section.active{
-    display:block;
-}
-
-/* ================= GENERAL ================= */
-
-.hero{
-    background:linear-gradient(135deg,#000,#444);
-    color:#fff;
-    border-radius:20px;
-    padding:25px;
-    margin-bottom:20px;
-}
-
-.hero h1{
-    margin-bottom:8px;
-}
-
-.card{
-    background:#fff;
-    border-radius:17px;
-    padding:18px;
-    margin:15px 0;
-    box-shadow:0 4px 15px rgba(0,0,0,.07);
-}
-
-.card h2,
-.card h3{
-    margin-bottom:8px;
-}
-
-.primaryButton{
-    background:#000;
-    color:#fff;
-    padding:12px 16px;
-    border-radius:10px;
-    font-weight:bold;
-    margin-top:8px;
-}
-
-.secondaryButton{
-    background:#eee;
-    color:#111;
-    padding:10px 14px;
-    border-radius:10px;
-    margin-top:8px;
-}
-
-/* ================= OFFERINGS ================= */
-
-.offeringGrid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:12px;
-    margin-top:14px;
-}
-
-.offering{
-    background:#fff;
-    padding:18px 8px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 3px 12px rgba(0,0,0,.06);
-    cursor:pointer;
-    transition:.15s;
-}
-
-.offering:hover{
-    transform:translateY(-2px);
-}
-
-.offeringIcon{
-    font-size:28px;
-    margin-bottom:8px;
-}
-
-.offeringTitle{
-    font-weight:bold;
-    font-size:14px;
-}
-
-/* ================= EVENTS ================= */
-
-.event{
-    display:flex;
-    gap:15px;
-    align-items:center;
-    padding:15px 0;
-    border-bottom:1px solid #eee;
-}
-
-.event:last-child{
-    border-bottom:0;
-}
-
-.eventIcon{
-    font-size:28px;
-}
-
-.eventTime{
-    font-size:12px;
-    color:#777;
-}
-
-.eventTitle{
-    font-weight:bold;
-    margin-top:3px;
-}
-
-/* ================= STUDY ZONE ================= */
-
-.studyGrid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
-}
-
-.studyItem{
-    background:#fff;
-    padding:20px 10px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 3px 12px rgba(0,0,0,.06);
-    cursor:pointer;
-}
-
-.studyItem span{
-    display:block;
-    font-size:28px;
-    margin-bottom:8px;
-}
-
-/* ================= SUBJECTS ================= */
-
-.subjectGrid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-    margin-top:15px;
-}
-
-.subject{
-    background:#fff;
-    padding:20px 10px;
-    border-radius:15px;
-    text-align:center;
-    font-weight:bold;
-    box-shadow:0 4px 14px rgba(0,0,0,.06);
-    cursor:pointer;
-}
-
-.subject span{
-    display:block;
-    font-size:30px;
-    margin-bottom:8px;
-}
-
-/* ================= MATERIAL ================= */
-
-.material{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:10px;
-    padding:15px 0;
-    border-bottom:1px solid #eee;
-}
-
-.material:last-child{
-    border-bottom:0;
-}
-
-.materialButton{
-    background:#000;
-    color:#fff;
-    padding:9px 13px;
-    border-radius:9px;
-}
-
-/* ================= INPUT ================= */
-
-input,
-textarea,
-select{
-    width:100%;
-    border:1px solid #ccc;
-    border-radius:10px;
-    padding:13px;
-    margin:6px 0;
-    font-size:15px;
-    outline:none;
-}
-
-input:focus,
-textarea:focus,
-select:focus{
-    border-color:#000;
-}
-
-/* ================= TEST ================= */
-
-.test{
-    border:1px solid #eee;
-    padding:15px;
-    border-radius:12px;
-    margin:10px 0;
-}
-
-.testButton{
-    background:#000;
-    color:#fff;
-    padding:9px 14px;
-    border-radius:8px;
-    margin-top:8px;
-}
-
-/* ================= COMMUNITY ================= */
-
-.post{
-    border-left:4px solid #000;
-}
-
-.postName{
-    font-weight:bold;
-    margin-bottom:7px;
-}
-
-.postActions{
-    display:flex;
-    gap:8px;
-    margin-top:12px;
-}
-
-.editButton{
-    background:#eee;
-    padding:7px 12px;
-    border-radius
+  function openDrawer(){
+    drawer.classList.add('open');
+    backdrop.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeDrawer(){
+    drawer.classList.remove('open');
+    backdrop.classList.remove('open');
+    document.body.style.overflow='';
+  }
+  function toast(message){
+    toastBox.textContent=message;
+    toastBox.classList.add('show');
+    clearTimeout(window.toastTimer);
+    window.toastTimer=setTimeout(()=>toastBox.classList.remove('show'),1800);
+  }
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape') closeDrawer();
+  });
+</script>
+</body>
+</html>
