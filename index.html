@@ -2,11 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<meta name="google-site-verification"
-content="KWy4Jf7SYdAFLb8-fOc6aUM2hg3fsdn1pElxtMMU7Gw">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AB ICSE</title>
 
 <style>
@@ -14,12 +10,13 @@ content="KWy4Jf7SYdAFLb8-fOc6aUM2hg3fsdn1pElxtMMU7Gw">
     box-sizing:border-box;
     margin:0;
     padding:0;
-    font-family:Arial,sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
     background:#f5f5f5;
     color:#111;
+    transition:.2s;
 }
 
 button{
@@ -31,7 +28,7 @@ button{
     display:none!important;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 .header{
     height:65px;
@@ -40,59 +37,60 @@ button{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:10px 15px;
+    padding:8px 14px;
     position:sticky;
     top:0;
     z-index:100;
 }
 
-.header-left{
+.headerLeft{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:10px;
 }
 
-.menu-btn{
+.menuButton{
     background:none;
-    color:white;
-    font-size:27px;
+    color:#fff;
+    font-size:28px;
+    padding:5px;
 }
 
 .logo{
-    width:42px;
-    height:42px;
+    width:43px;
+    height:43px;
     border-radius:50%;
     background:#fff;
     color:#000;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:10px;
-    font-weight:bold;
     text-align:center;
+    font-weight:bold;
+    font-size:10px;
+    line-height:11px;
 }
 
-.header-title{
+.headerTitle{
     font-size:20px;
     font-weight:bold;
 }
 
-.xp{
-    background:white;
+.xpButton{
+    background:#fff;
     color:#000;
-    padding:9px 13px;
+    padding:9px 12px;
     border-radius:20px;
     font-weight:bold;
 }
 
-
-/* MAIN */
+/* ================= MAIN ================= */
 
 .container{
-    max-width:900px;
+    max-width:950px;
     margin:auto;
     padding:18px;
-    padding-bottom:100px;
+    padding-bottom:90px;
 }
 
 .section{
@@ -103,14 +101,13 @@ button{
     display:block;
 }
 
-
-/* HERO */
+/* ================= GENERAL ================= */
 
 .hero{
     background:linear-gradient(135deg,#000,#444);
-    color:white;
+    color:#fff;
     border-radius:20px;
-    padding:24px;
+    padding:25px;
     margin-bottom:20px;
 }
 
@@ -118,58 +115,76 @@ button{
     margin-bottom:8px;
 }
 
-
-/* CARDS */
-
 .card{
-    background:white;
-    border-radius:16px;
+    background:#fff;
+    border-radius:17px;
     padding:18px;
-    margin:14px 0;
+    margin:15px 0;
     box-shadow:0 4px 15px rgba(0,0,0,.07);
 }
 
+.card h2,
 .card h3{
     margin-bottom:8px;
 }
 
+.primaryButton{
+    background:#000;
+    color:#fff;
+    padding:12px 16px;
+    border-radius:10px;
+    font-weight:bold;
+    margin-top:8px;
+}
 
-/* BATCH OFFERINGS */
+.secondaryButton{
+    background:#eee;
+    color:#111;
+    padding:10px 14px;
+    border-radius:10px;
+    margin-top:8px;
+}
 
-.offering-grid{
+/* ================= OFFERINGS ================= */
+
+.offeringGrid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:10px;
-    margin-top:12px;
+    gap:12px;
+    margin-top:14px;
 }
 
 .offering{
-    background:white;
-    border-radius:14px;
+    background:#fff;
     padding:18px 8px;
+    border-radius:15px;
     text-align:center;
     box-shadow:0 3px 12px rgba(0,0,0,.06);
     cursor:pointer;
+    transition:.15s;
 }
 
-.offering-icon{
-    font-size:27px;
+.offering:hover{
+    transform:translateY(-2px);
+}
+
+.offeringIcon{
+    font-size:28px;
     margin-bottom:8px;
 }
 
-.offering-title{
+.offeringTitle{
     font-weight:bold;
     font-size:14px;
 }
 
-
-/* EVENTS */
+/* ================= EVENTS ================= */
 
 .event{
     display:flex;
-    align-items:center;
     gap:15px;
-    padding:14px 0;
+    align-items:center;
+    padding:15px 0;
     border-bottom:1px solid #eee;
 }
 
@@ -177,31 +192,30 @@ button{
     border-bottom:0;
 }
 
-.event-icon{
+.eventIcon{
     font-size:28px;
 }
 
-.event-time{
+.eventTime{
     font-size:12px;
     color:#777;
 }
 
-.event-title{
+.eventTitle{
     font-weight:bold;
     margin-top:3px;
 }
 
+/* ================= STUDY ZONE ================= */
 
-/* STUDY ZONE */
-
-.study-grid{
+.studyGrid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:12px;
 }
 
-.study-item{
-    background:white;
+.studyItem{
+    background:#fff;
     padding:20px 10px;
     border-radius:15px;
     text-align:center;
@@ -209,16 +223,15 @@ button{
     cursor:pointer;
 }
 
-.study-item span{
+.studyItem span{
     display:block;
     font-size:28px;
     margin-bottom:8px;
 }
 
+/* ================= SUBJECTS ================= */
 
-/* SUBJECTS */
-
-.subject-grid{
+.subjectGrid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:12px;
@@ -226,12 +239,13 @@ button{
 }
 
 .subject{
-    background:white;
-    border-radius:15px;
+    background:#fff;
     padding:20px 10px;
+    border-radius:15px;
     text-align:center;
-    box-shadow:0 4px 14px rgba(0,0,0,.07);
     font-weight:bold;
+    box-shadow:0 4px 14px rgba(0,0,0,.06);
+    cursor:pointer;
 }
 
 .subject span{
@@ -240,14 +254,14 @@ button{
     margin-bottom:8px;
 }
 
-
-/* MATERIAL */
+/* ================= MATERIAL ================= */
 
 .material{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:14px 0;
+    gap:10px;
+    padding:15px 0;
     border-bottom:1px solid #eee;
 }
 
@@ -255,25 +269,43 @@ button{
     border-bottom:0;
 }
 
-.material button,
-.black-btn{
+.materialButton{
     background:#000;
     color:#fff;
     padding:9px 13px;
     border-radius:9px;
 }
 
+/* ================= INPUT ================= */
 
-/* TESTS */
+input,
+textarea,
+select{
+    width:100%;
+    border:1px solid #ccc;
+    border-radius:10px;
+    padding:13px;
+    margin:6px 0;
+    font-size:15px;
+    outline:none;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:#000;
+}
+
+/* ================= TEST ================= */
 
 .test{
-    padding:15px;
     border:1px solid #eee;
+    padding:15px;
     border-radius:12px;
     margin:10px 0;
 }
 
-.test button{
+.testButton{
     background:#000;
     color:#fff;
     padding:9px 14px;
@@ -281,951 +313,24 @@ button{
     margin-top:8px;
 }
 
-
-/* INPUT */
-
-input,
-textarea,
-select{
-    width:100%;
-    padding:13px;
-    border:1px solid #ccc;
-    border-radius:10px;
-    margin:7px 0;
-    font-size:15px;
-}
-
-.primary-btn{
-    background:#000;
-    color:#fff;
-    width:100%;
-    padding:13px;
-    border-radius:10px;
-    font-weight:bold;
-    margin-top:8px;
-}
-
-
-/* COMMUNITY */
+/* ================= COMMUNITY ================= */
 
 .post{
     border-left:4px solid #000;
 }
 
-.post-name{
+.postName{
     font-weight:bold;
     margin-bottom:7px;
 }
 
-.post-actions{
+.postActions{
     display:flex;
     gap:8px;
     margin-top:12px;
 }
 
-.post-actions button{
-    padding:7px 11px;
-    border-radius:8px;
+.editButton{
     background:#eee;
-}
-
-.post-actions .delete{
-    background:#000;
-    color:#fff;
-}
-
-
-/* RANK */
-
-.rank-card{
-    background:linear-gradient(135deg,#000,#444);
-    color:white;
-    border-radius:20px;
-    padding:25px;
-    text-align:center;
-}
-
-.rank-name{
-    font-size:29px;
-    font-weight:bold;
-    margin:12px;
-}
-
-.progress{
-    height:12px;
-    background:#ddd;
-    border-radius:10px;
-    overflow:hidden;
-    margin-top:15px;
-}
-
-.progress-bar{
-    width:0%;
-    height:100%;
-    background:#fff;
-}
-
-
-/* BATCHES */
-
-.batch{
-    padding:16px;
-    border:1px solid #eee;
-    border-radius:13px;
-    margin:10px 0;
-    cursor:pointer;
-}
-
-.batch h3{
-    margin-bottom:5px;
-}
-
-
-/* HISTORY / BOOKMARK */
-
-.history-item,
-.bookmark-item{
-    padding:14px 0;
-    border-bottom:1px solid #eee;
-}
-
-.history-item:last-child,
-.bookmark-item:last-child{
-    border-bottom:0;
-}
-
-
-/* SIDE DRAWER */
-
-.overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.45);
-    z-index:300;
-    display:none;
-}
-
-.overlay.show{
-    display:block;
-}
-
-.drawer{
-    position:fixed;
-    left:0;
-    top:0;
-    bottom:0;
-    width:310px;
-    max-width:85%;
-    background:white;
-    z-index:400;
-    transform:translateX(-100%);
-    transition:.25s;
-    overflow-y:auto;
-}
-
-.drawer.open{
-    transform:translateX(0);
-}
-
-.drawer-profile{
-    background:#000;
-    color:#fff;
-    padding:25px 20px;
-}
-
-.profile-circle{
-    width:58px;
-    height:58px;
-    background:white;
-    color:#000;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    margin-bottom:12px;
-}
-
-.drawer-menu{
-    padding:12px;
-}
-
-.drawer-item{
-    width:100%;
-    background:white;
-    text-align:left;
-    padding:15px;
-    border-radius:10px;
-    margin:2px 0;
-    font-size:15px;
-}
-
-.drawer-item:hover{
-    background:#eee;
-}
-
-.drawer-item span{
-    display:inline-block;
-    width:32px;
-}
-
-
-/* THEME */
-
-.dark{
-    background:#111;
-    color:#fff;
-}
-
-.dark .card,
-.dark .subject,
-.dark .offering,
-.dark .study-item,
-.dark .test,
-.dark .batch{
-    background:#222;
-    color:#fff;
-}
-
-.dark .bottom-nav{
-    background:#222;
-}
-
-.dark .bottom-nav button{
-    color:#aaa;
-}
-
-.dark input,
-.dark textarea,
-.dark select{
-    background:#222;
-    color:#fff;
-    border-color:#555;
-}
-
-.dark .material,
-.dark .history-item,
-.dark .bookmark-item,
-.dark .event{
-    border-color:#444;
-}
-
-
-/* BOTTOM NAV */
-
-.bottom-nav{
-    position:fixed;
-    left:0;
-    right:0;
-    bottom:0;
-    height:70px;
-    background:white;
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    box-shadow:0 -4px 18px rgba(0,0,0,.12);
-    z-index:200;
-    overflow-x:auto;
-}
-
-.bottom-nav button{
-    background:none;
-    color:#777;
-    font-size:11px;
-    min-width:60px;
-    padding:5px;
-}
-
-.bottom-nav button.active{
-    color:#000;
-    font-weight:bold;
-}
-
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-    .offering-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .study-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .header-title{
-        font-size:17px;
-    }
-
-    .xp{
-        font-size:12px;
-        padding:7px 9px;
-    }
-
-}
-
-</style>
-</head>
-
-<body>
-
-
-<!-- =========================
-     SIDE MENU
-========================= -->
-
-<div id="overlay"
-     class="overlay"
-     onclick="closeDrawer()">
-</div>
-
-<div id="drawer"
-     class="drawer">
-
-    <div class="drawer-profile">
-
-        <div class="profile-circle">
-            AB
-        </div>
-
-        <h2>AB ICSE Student</h2>
-
-        <p style="margin-top:5px;">
-            View Profile
-        </p>
-
-    </div>
-
-
-    <div class="drawer-menu">
-
-        <button class="drawer-item"
-                onclick="closeDrawer();showSection('home')">
-            <span>🏠</span> Home
-        </button>
-
-        <button class="drawer-item"
-                onclick="toggleDarkMode()">
-            <span>🌙</span> Dark Mode
-        </button>
-
-        <button class="drawer-item"
-                onclick="closeDrawer();showSection('quick')">
-            <span>⚡</span> Quick Learning
-        </button>
-
-        <button class="drawer-item"
-                onclick="closeDrawer();showSection('tests')">
-            <span>📝</span> Test Series
-        </button>
-
-        <button class="drawer-item"
-                onclick="closeDrawer();showSection('library')">
-            <span>📚</span> Library
-        </button>
-
-        <button class="drawer-item"
-                onclick="closeDrawer();showSection('downloads')">
-            <span>⬇️</span> Downloads
-        </button>
-
-        <button class="drawer-item"
-                onclick="closeDrawer();showSection('terms')">
-            <span>📄</span> Terms & Conditions
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- =========================
-     APP
-========================= -->
-
-<div id="app">
-
-
-<!-- HEADER -->
-
-<header class="header">
-
-    <div class="header-left">
-
-        <button class="menu-btn"
-                onclick="openDrawer()">
-            ☰
-        </button>
-
-        <div class="logo">
-            AB<br>ICSE
-        </div>
-
-        <div class="header-title">
-            AB ICSE
-        </div>
-
-    </div>
-
-
-    <div class="xp"
-         onclick="showSection('rank')">
-        ⚡ <span id="headerXP">0</span> XP
-    </div>
-
-</header>
-
-
-
-<div class="container">
-
-
-<!-- =========================
-     HOME
-========================= -->
-
-<section id="home"
-         class="section active">
-
-    <div class="hero">
-
-        <h1>Welcome to AB ICSE 👋</h1>
-
-        <p>
-            Learn • Practice • Improve
-        </p>
-
-    </div>
-
-
-    <!-- BATCH OFFERINGS -->
-
-    <h2>Batch Offerings</h2>
-
-    <div class="offering-grid">
-
-        <div class="offering"
-             onclick="showSection('subjects')">
-
-            <div class="offering-icon">📚</div>
-            <div class="offering-title">
-                All Classes
-            </div>
-
-        </div>
-
-
-        <div class="offering"
-             onclick="showSection('tests')">
-
-            <div class="offering-icon">📝</div>
-            <div class="offering-title">
-                All Tests
-            </div>
-
-        </div>
-
-
-        <div class="offering"
-             onclick="showSection('doubts')">
-
-            <div class="offering-icon">❓</div>
-            <div class="offering-title">
-                My Doubts
-            </div>
-
-        </div>
-
-
-        <div class="offering"
-             onclick="showSection('community')">
-
-            <div class="offering-icon">👥</div>
-            <div class="offering-title">
-                Community
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- UPCOMING EVENTS -->
-
-    <div class="card">
-
-        <h2>Upcoming Events</h2>
-
-        <div class="event">
-
-            <div class="event-icon">
-                ⚡
-            </div>
-
-            <div>
-
-                <div class="event-time">
-                    4:00 PM
-                </div>
-
-                <div class="event-title">
-                    Lecture • Physics
-                </div>
-
-                <small>
-                    Physics Chapter Lecture
-                </small>
-
-            </div>
-
-        </div>
-
-
-        <div class="event">
-
-            <div class="event-icon">
-                🧪
-            </div>
-
-            <div>
-
-                <div class="event-time">
-                    6:15 PM
-                </div>
-
-                <div class="event-title">
-                    Lecture • Chemistry
-                </div>
-
-                <small>
-                    Chemistry Chapter Lecture
-                </small>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- MY STUDY ZONE -->
-
-    <div class="card">
-
-        <h2>My Study Zone</h2>
-
-        <div class="study-grid"
-             style="margin-top:12px;">
-
-            <div class="study-item"
-                 onclick="showSection('batches')">
-                <span>📚</span>
-                My Batches
-            </div>
-
-            <div class="study-item"
-                 onclick="showSection('dashboard')">
-                <span>📊</span>
-                Dashboard
-            </div>
-
-            <div class="study-item"
-                 onclick="showSection('library')">
-                <span>📖</span>
-                Library
-            </div>
-
-            <div class="study-item"
-                 onclick="showSection('history')">
-                <span>↩️</span>
-                My History
-            </div>
-
-            <div class="study-item"
-                 onclick="showSection('bookmarks')">
-                <span>🔖</span>
-                Bookmarks
-            </div>
-
-            <div class="study-item"
-                 onclick="showSection('rank')">
-                <span>🏆</span>
-                XP & Rank
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     ALL CLASSES / SUBJECTS
-========================= -->
-
-<section id="subjects"
-         class="section">
-
-    <h2>📚 All Classes</h2>
-
-    <p style="margin-top:6px;color:#777;">
-        Select a subject to view videos, notes and practice.
-    </p>
-
-
-    <div class="subject-grid">
-
-        <div class="subject"
-             onclick="openSubject('English')">
-            <span>📖</span>
-            English
-        </div>
-
-        <div class="subject"
-             onclick="openSubject('Hindi')">
-            <span>📝</span>
-            Hindi
-        </div>
-
-        <div class="subject"
-             onclick="openSubject('Mathematics')">
-            <span>➗</span>
-            Mathematics
-        </div>
-
-        <div class="subject"
-             onclick="openSubject('Physics')">
-            <span>⚡</span>
-            Physics
-        </div>
-
-        <div class="subject"
-             onclick="openSubject('Chemistry')">
-            <span>🧪</span>
-            Chemistry
-        </div>
-
-        <div class="subject"
-             onclick="openSubject('Biology')">
-            <span>🧬</span>
-            Biology
-        </div>
-
-        <div class="subject"
-             onclick="openSubject('History & Civics')">
-            <span>🏛️</span>
-            History & Civics
-        </div>
-
-        <div class="subject"
-             onclick="openSubject('Geography')">
-            <span>🌍</span>
-            Geography
-        </div>
-
-        <div class="subject"
-             onclick="openSubject('Computer Applications')">
-            <span>💻</span>
-            Computer
-        </div>
-
-        <div class="subject"
-             onclick="openSubject('Second Language')">
-            <span>🗣️</span>
-            Second Language
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     SUBJECT DETAIL
-========================= -->
-
-<section id="subjectDetail"
-         class="section">
-
-    <button class="secondary-btn"
-            onclick="showSection('subjects')">
-        ← Back
-    </button>
-
-    <div class="card">
-
-        <h2 id="subjectTitle">
-            Subject
-        </h2>
-
-        <p id="subjectDescription"
-           style="margin:8px 0;color:#777;">
-        </p>
-
-
-        <div class="material">
-
-            <div>
-                🎥
-                <b>Lectures</b>
-                <br>
-                <small>Video classes</small>
-            </div>
-
-            <button onclick="showSection('videos')">
-                Open
-            </button>
-
-        </div>
-
-
-        <div class="material">
-
-            <div>
-                📄
-                <b>Notes</b>
-                <br>
-                <small>Chapter notes</small>
-            </div>
-
-            <button onclick="showSection('notes')">
-                Open
-            </button>
-
-        </div>
-
-
-        <div class="material">
-
-            <div>
-                📝
-                <b>DPP / Practice</b>
-                <br>
-                <small>Practice questions</small>
-            </div>
-
-            <button onclick="showSection('tests')">
-                Open
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     NOTES
-========================= -->
-
-<section id="notes"
-         class="section">
-
-    <h2>📄 Notes</h2>
-
-    <div class="card">
-
-        <div class="material">
-
-            <div>
-                📐 Mathematics<br>
-                <small>Chapter 1 Notes</small>
-            </div>
-
-            <button>
-                Open
-            </button>
-
-        </div>
-
-
-        <div class="material">
-
-            <div>
-                ⚡ Physics<br>
-                <small>Chapter 1 Notes</small>
-            </div>
-
-            <button>
-                Open
-            </button>
-
-        </div>
-
-
-        <div class="material">
-
-            <div>
-                🧪 Chemistry<br>
-                <small>Chapter 1 Notes</small>
-            </div>
-
-            <button>
-                Open
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     VIDEOS
-========================= -->
-
-<section id="videos"
-         class="section">
-
-    <h2>🎥 Videos</h2>
-
-    <div class="card">
-
-        <h3>Mathematics Lecture</h3>
-
-        <div style="margin-top:12px;
-                    background:#111;
-                    color:white;
-                    padding:55px 10px;
-                    text-align:center;
-                    border-radius:12px;">
-
-            ▶️ Mathematics Lecture
-
-        </div>
-
-        <button class="primary-btn"
-                onclick="watchVideo('Mathematics Lecture')">
-
-            ▶ Watch Lecture
-        </button>
-
-        <button class="primary-btn"
-                onclick="addBookmark('Mathematics Lecture')">
-
-            🔖 Bookmark
-        </button>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     TESTS
-========================= -->
-
-<section id="tests"
-         class="section">
-
-    <h2>📝 All Tests</h2>
-
-    <div class="card">
-
-        <div class="test">
-
-            <h3>Mathematics Test 1</h3>
-
-            <p>
-                20 Questions • 40 Marks
-            </p>
-
-            <button onclick="startTest('Mathematics Test 1')">
-                Start Test
-            </button>
-
-        </div>
-
-
-        <div class="test">
-
-            <h3>Physics Test 1</h3>
-
-            <p>
-                20 Questions • 40 Marks
-            </p>
-
-            <button onclick="startTest('Physics Test 1')">
-                Start Test
-            </button>
-
-        </div>
-
-
-        <div class="test">
-
-            <h3>Chemistry Test 1</h3>
-
-            <p>
-                20 Questions • 40 Marks
-            </p>
-
-            <button onclick="startTest('Chemistry Test 1')">
-                Start Test
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     DOUBTS
-========================= -->
-
-<section id="doubts"
-         class="section">
-
-    <h2>❓ My Doubts</h2>
-
-    <div class="card">
-
-        <input id="doubtSubject"
-               placeholder="Subject">
-
-        <textarea id="doubtText"
-                  rows="5"
-                  placeholder="Write your doubt..."></textarea>
-
-        <button class="primary-btn"
-                onclick="submitDoubt()">
-
-            Submit Doubt
-
-        </button>
-
-    </div>
-
-
-    <div id="doubtList"></div>
-
-</section>
-
-
-
-<!-- =========================
-     COMMUNITY
-========================= -->
-
-<section id="community"
-         class="section">
-
-    <h2>👥 Community</h2>
-
-    <div class="card">
-
-        <textarea id="communityText"
-                  rows="3"
-                  placeholder="Talk with other students..."></textarea
+    padding:7px 12px;
+    border-radius
